@@ -23,8 +23,8 @@ public class UserDAO {
 		
 			if(rs.next()) {
 				
-				String un = rs.getString("Fname");
-				String p = rs.getString("Password");
+				String un = rs.getString("username");
+				String p = rs.getString("password");
 				String email = rs.getString("email");
 				User u = new User(un,p,email);
 				return u;
