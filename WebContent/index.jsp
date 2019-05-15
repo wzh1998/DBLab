@@ -30,7 +30,7 @@ $(document).ready(function() {
 <body>
 <br />
 <br />
-<h1 style="font-size:250% " align="center"><font face="verdana" >COMP2004J Employee System</font></h1>
+<h1 style="font-size:250% " align="center"><font face="verdana" >IHCS Demo</font></h1>
 
 <div class="login-page">
   <div class="form">
