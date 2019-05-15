@@ -14,7 +14,7 @@ public class UserDAO {
 		try {
 			conn = JDBCTool.getConnection();
 		
-			String information = "SELECT * FROM Users WHERE Fname=? AND Password=?";
+			String information = "SELECT * FROM Users WHERE FName=? AND Password=?";
 			PreparedStatement ps = conn.prepareStatement(information);
 			ps.setString(1, username);
 			ps.setString(2, password);
@@ -23,9 +23,9 @@ public class UserDAO {
 		
 			if(rs.next()) {
 				
-				String un = rs.getString("username");
-				String p = rs.getString("password");
-				String email = rs.getString("email");
+				String un = rs.getString("FName");
+				String p = rs.getString("Password");
+				String email = rs.getString("Mail");
 				User u = new User(un,p,email);
 				return u;
 	
