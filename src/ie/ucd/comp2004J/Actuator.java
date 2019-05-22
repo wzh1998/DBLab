@@ -43,5 +43,8 @@ public class Actuator {
 	public void setActState(int ActState) {
 		this.ActState = ActState;
 	}
+	public String toString() {
+		return this.ActID+ "\t\t" +this.ActName + "\t\t" + this.ActState ;
 
+	}
 }

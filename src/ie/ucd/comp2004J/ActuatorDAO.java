@@ -107,7 +107,8 @@ public class ActuatorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
-			int rs = st.executeUpdate("UPDATE Actuators SET ActID='"+ act.getActID() + "', ActName='" + act.getActName() + "', ActState=" + act.getActState() + ";" );
+			System.out.println("UPDATE Actuators SET ActName='"+ act.getActName() + "', ActState=" + act.getActState() + " WHERE ActID=" + act.getActID() + ";");
+			int rs = st.executeUpdate("UPDATE Actuators SET ActName='"+ act.getActName() + "', ActState=" + act.getActState() + " WHERE ActID=" + act.getActID() + ";" );
 			
 			st.close();
 			conn.close();

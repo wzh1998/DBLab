@@ -1,5 +1,7 @@
 package ie.ucd.comp2004J;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Sensor {
 	
@@ -11,9 +13,9 @@ public class Sensor {
 	private int ActID;
 	private String Unit;
 	private String Type;
+	private String Room;
 	
-	
-	public Sensor(int SensorID, String SenName, int SenState, String UpdateTime, String UpdateData, int ActID, String Unit, String Type) {
+	public Sensor(int SensorID, String SenName, int SenState, String UpdateTime, String UpdateData, int ActID, String Unit, String Type, String Room) {
 		super();
 		this.SensorID = SensorID;
 		this.SenName = SenName;
@@ -23,9 +25,19 @@ public class Sensor {
 		this.ActID = ActID;
 		this.Unit = Unit;
 		this.Type = Type;
-		
+		this.Room = Room;
 	}
-
+	public Sensor(int SensorID, String SenName, int SenState, String UpdateData, int ActID, String Unit, String Type, String Room) {
+		super();
+		this.SensorID = SensorID;
+		this.SenName = SenName;
+		this.SenState = SenState;
+		this.UpdateData = UpdateData;
+		this.ActID = ActID;
+		this.Unit = Unit;
+		this.Type = Type;
+		this.Room = Room;
+	}
 
 	public int getSensorID() {
 		return SensorID;
@@ -45,7 +57,12 @@ public class Sensor {
 	public String getUpdateTime() {
 		return UpdateTime;
 	}
+	public String createTime() {
+		Date now = new Date( );
+	    SimpleDateFormat ft = new SimpleDateFormat ("yyyy.MM.dd kk:mm:ss");
 
+	    return ft.format(now);
+	}
 
 	public String getUpdateData() {
 		return UpdateData;
@@ -65,10 +82,12 @@ public class Sensor {
 		return Type;
 	}
 
-	
+	public String getRoom() {
+		return Room;
+	}
 	
 	public String toString() {
-		return this.SensorID+ "\t\t" +this.SenName + "\t\t" + this.SenState + "\t\t" + this.UpdateTime + "\t\t" + this.UpdateData + "\t\t" + this.ActID + "\t\t" + this.Unit + "\t\t" + this.Type;
+		return this.SensorID+ "\t\t" +this.SenName + "\t\t" + this.SenState + "\t\t" + this.UpdateTime + "\t\t" + this.UpdateData + "\t\t" + this.ActID + "\t\t" + this.Unit + "\t\t" + this.Type + "\t\t" + this.Room ;
 //		return this.empno+"\t\t"+this.name+"\t\t"+this.job+ "\t\t"+this.salary+ "\t\t"+this.deptno;
 //		String p1 = String.format("%04d %s", this.empno, this.name);
 //		int dif = 16 - this.name.length();

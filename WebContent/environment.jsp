@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<!DOCTYPE html>
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
@@ -106,25 +109,18 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a class="actived" href="#">Home
+                 <a href="setActuators.jsp">Device
                   <span class="hidden-lg span-drop"></span>
                  </a>
-                 <ul>
-                    <li><a href="index.html">Index</a></li>
-<li><a href="index-black.html">Index Black</a></li>
-                    <li><a href="intro/index.html">Intro</a></li>
-                 </ul>
+                 
                 </li>
                 <li>
-                 <a href="#">Pages
+                 <a class="actived" href="viewSensors.jsp">Environment
                   <span class="hidden-lg span-drop"></span>
                  </a>
-                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-<li><a href="about-black.html">About Black</a></li>
-                    <li><a href="about-team.html">About Team</a></li>
-                 </ul>
+                 
                 </li>
+
                 <li><a href="#">Works
                   <span class="hidden-lg span-drop"></span>
                 </a>
@@ -175,211 +171,9 @@
       <!-- nav end -->
       </header>
       
-      <!-- revolution slider -->
-      <section class="no-top no-bottom" aria-label="section-slider">
-      <!-- home -->
-      <div id="mainbanner">
-      <div class="fullwidthbanner-container">
-      <div id="revolution-slider-half">
-                    <ul>
-
-                        <li data-transition="parallaxtobottom" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
-                            <!--  BACKGROUND IMAGE -->
-                            <img src="images-slider/img-slide-1.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="120" data-bgfitend="100" data-bgpositionend="center center"/>
-                            <div class="tp-caption slide-big-heading sft"
-                                data-x="0"
-                                data-y="270"
-                                data-speed="800"
-                                data-start="400"
-                                data-easing="easeInOutExpo"
-                                data-endspeed="450">
-                                Architecture Design
-                            </div>
-
-                            <div class="tp-caption slide-sub-heading sft"
-                                data-x="0"
-                                data-y="350"
-                                data-speed="1000"
-					            data-start="800"
-					            data-easing="easeOutExpo"
-                                data-endspeed="400">
-                                Concreate Art
-                            </div>
-
-                            <div class="tp-caption btn-slider sfb"
-                                data-x="0"
-                                data-y="450"
-                                data-speed="400"
-                                data-start="800"
-                                data-easing="easeInOutExpo">
-                                <span class="shine"></span><a href="#" >More Detail &rarr;</a>
-                            </div>
-
-                        </li>
-                        
-                        <li data-transition="parallaxtobottom" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
-                            <!--  BACKGROUND IMAGE -->
-                            <img src="images-slider/img-slide-2.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="120" data-bgfitend="100" data-bgpositionend="center center"/>
-                            <div class="tp-caption slide-big-heading sft"
-                                data-x="0"
-                                data-y="270"
-                                data-speed="800"
-                                data-start="400"
-                                data-easing="easeInOutExpo"
-                                data-endspeed="450">
-                                Design Concreate
-                            </div>
-
-                            <div class="tp-caption slide-sub-heading sft"
-                                data-x="0"
-                                data-y="350"
-                                data-speed="1000"
-                      data-start="800"
-                      data-easing="easeOutExpo"
-                                data-endspeed="400">
-                                Modern Building
-                            </div>
-
-                            <div class="tp-caption btn-slider sfb"
-                                data-x="0"
-                                data-y="450"
-                                data-speed="400"
-                                data-start="800"
-                                data-easing="easeInOutExpo">
-                                <span class="shine"></span><a href="#" >More Detail &rarr;</a>
-                            </div>
-
-                        </li>
-
-                        <li data-transition="parallaxtobottom" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
-                            <!--  BACKGROUND IMAGE -->
-                            <img src="images-slider/img-slide-3.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="120" data-bgfitend="100" data-bgpositionend="center center"/>
-                            <div class="tp-caption slide-big-heading sft"
-                                data-x="0"
-                                data-y="270"
-                                data-speed="800"
-                                data-start="400"
-                                data-easing="easeInOutExpo"
-                                data-endspeed="450">
-                                Conceptual Design
-                            </div>
-
-                            <div class="tp-caption slide-sub-heading sft"
-                                data-x="0"
-                                data-y="350"
-                                data-speed="1000"
-                      data-start="800"
-                      data-easing="easeOutExpo"
-                                data-endspeed="400">
-                                House & Building
-                            </div>
-
-                            <div class="tp-caption btn-slider sfb"
-                                data-x="0"
-                                data-y="450"
-                                data-speed="400"
-                                data-start="800"
-                                data-easing="easeInOutExpo">
-                                <span class="shine"></span><a href="#" >More Detail &rarr;</a>
-                            </div>
-
-                        </li>
-                       
-                    </ul>
-                    <div class="tp-bannertimer hide"></div>
-                </div>
-              </div>
-  </div>
-  <!-- home end -->
-  </section>
-  <!-- revolution slider end -->
+      
   
-  <!-- about home -->
-  <section aria-label="about">
-    <div class="container-fluid m-5-hor">
-      <div class="row">
-
-        <div class="col-md-6 onStep" data-animation="fadeInLeft" data-time="300">
-          <h2 class="heading">
-            ABOUT US 
-          </h2>
-          <h3 class="headingcontent">
-            We Are <br>
-            Architecture<br>
-            Design<br>
-          </h3>
-          <p class="content">
-            Donec at cursus sem. Duis condimentum posuere purus, at venenatis tellus mollis. Vestibulum cursus convallis venenatis. Sed ut blandit mauris. Lorem non suscipit. Proin pretium consequat est, sit amet consectetur luctus vel. Etiam quis interdum felis, at pellentesque metus.
-          </p>
-          <div class="year">
-            <div class="heading">23</div>
-            <div class="subheading dd4425">Year <br>Experience<br> Working</div>
-          </div>
-        </div>
-
-        <div class="col-md-5 col-md-offset-1 onStep" data-animation="fadeInRight" data-time="600">
-          <div id="imghome" class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="gal-home">
-                  <div class="projects-grid">
-                      <div class="hovereffect-color ">
-                        <img class="img-responsive imgmain" alt="imghome" src="img/imghome1.jpg">
-                          <div class="overlay start-align">
-                            <div>
-                              <h3>DESIGN <br> INTERIOR <br> HOUZEZ</h3>
-                              <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
-                              MORE DETAIL &rarr;
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="gal-home">
-                  <div class="projects-grid">
-                      <div class="hovereffect-color ">
-                        <img class="img-responsive imgmain" alt="imghome" src="img/imghome2.jpg">
-                          <div class="overlay">
-                            <div class="start-align">
-                              <h3>REDESIGN <br> CO-WORKING <br> ROOM</h3>
-                              <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
-                              MORE DETAIL &rarr;
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="gal-home">
-                  <div class="projects-grid">
-                      <div class="hovereffect-color ">
-                        <img class="img-responsive imgmain" alt="imghome" src="img/imghome3.jpg">
-                          <div class="overlay">
-                            <div class="start-align">
-                              <h3>DESIGN <br> INTERIOR <br> BALCONY</h3>
-                              <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
-                              MORE DETAIL &rarr;
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- about home end -->
+  
 
       <!--  gallery home --> 
       <section  aria-label="projects">
@@ -389,7 +183,8 @@
           <div class="col-md-12">
             <div class="wrapheading">
               <h1 class="heading no-top">PROJECTS</h1>
-              <h2 >OUR <br>PROJECTS</h2>
+              <h2 >Our <br>Works</h2>
+              <h2 class="headingcontent">We Build Architectural & Design</h2>
             </div>
 
                  <div class="onStep" data-animation="fadeInUp" data-time="0">
@@ -403,12 +198,12 @@
                                 <div class="gal-home-content">
                                   <div class="row">
                                        <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>Co-working room</h4>
+                                        <h4>Bedroom</h4>
                                         <p>Interior</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
+                                        <a class="shin col" href="bedroom-detail.jsp">
+                                          see details &rarr;
                                         </a>
                                        </div>
                                  </div>
@@ -424,12 +219,12 @@
                                 <div class="gal-home-content">
                                   <div class="row">
                                        <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>The-working place</h4>
+                                        <h4>Living room</h4>
                                         <p>Interior</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
+                                        <a class="shin col" href="room-detail.dsp">
+                                          see details &rarr;
                                         </a>
                                        </div>
                                  </div>
@@ -445,12 +240,12 @@
                                 <div class="gal-home-content">
                                   <div class="row">
                                        <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>Rest-working room</h4>
+                                        <h4>Kitchen</h4>
                                         <p>Interior</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
                                         <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
+                                          see details &rarr;
                                         </a>
                                        </div>
                                  </div>
@@ -531,57 +326,10 @@
       </section> 
       <!--  gallery home end --> 
 
-      <!--  tagline --> 
-      <section class="dot" aria-label="tagline">
-        <div class="container-fluid m-5-hor">
-          <div class="row">
-          
-              <div class="col-md-12">
-                <div class="wrapheading">
-                  <h1 class="heading">ABOUT OUR VISION</h1>
-                </div>
-                <p class="tagline">Architectural works of art, in the material form of buildings, are often perceived as cultural symbols and as works of art. Historical civilizations are often identified with their surviving architectural achievements.</p>
-              </div>  
-
-          </div>
-        </div>
-      </section>
-      <!--  tagline end --> 
 
 
-       <!-- footer -->
-       <footer class="footer">
-        <div class="container-fluid m-5-hor">
-          <div class="footer-widgets">
-            <div class="row">
-              <div class="col-md-8 col-sm-12 col-xs-12">
-                <div class="widget footer-links">
-                  <ul class="list-menu">
-                    <li><a href="#">TERMS</a></li>
-                    <li><a href="#">CONTRACT</a></li>
-                    <li>
-                      <ul>
-                        <li><a class="active" href="#">ENG</a></li>
-                        <li><a href="#">FRA</a></li>
-                        <li><a href="#">GER</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="col-md-4 col-sm-12 col-xs-12">
-              <div class="search-container text-right">
-                <form action="#">
-                  <input class="s-input-home" type="text" placeholder="Search…" name="search">
-                  <button class="btn-s-input" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-              </div>
-
-            </div>
-          </div>
-        </div><!-- end container -->
+   
           <div class="container-fluid m-5-hor">
             <div class="bottom-footer">
               <div class="row">
@@ -618,14 +366,14 @@
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
-                      <form action="login.jsp" method="post">
+                      <form action="#" method="post">
                         <div class="form-group">
                           <label>User Name</label>
-                          <input type="text" class="form-control" name="username" required>
+                          <input type="text" class="form-control" required>
                         </div>
                         <div class="form-group">
                           <label>Password</label>
-                          <input type="password" class="form-control" name="password" required>         
+                          <input type="password" class="form-control" required>         
                         </div>
                         <div class="form-group">
                           <input type="submit" class="btn btn-primary btn-block btn-lg" value="Log In">

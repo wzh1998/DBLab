@@ -15,11 +15,11 @@ out.print(password);
 User u = UserDAO.login(username, password);
 
 if(u==null){
-	//response.sendRedirect("index.jsp");
+	response.sendRedirect("index.jsp");
 }
 else{
 	session.setAttribute("user", u);
-	response.sendRedirect("mainMenu.jsp");
+	response.sendRedirect("Overview.jsp");
 	
 	//User u2 = (User)session.getAttribute("user");
 }
@@ -34,7 +34,7 @@ else{
 <script>
 function alertFailed(){
 	alert("Wrong Password or Username, Please Try Again!");
-	window.document.location.href="index-black.html";
+	window.document.location.href="index.jsp";
 }
 </script>
 
