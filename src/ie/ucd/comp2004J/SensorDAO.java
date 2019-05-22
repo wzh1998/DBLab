@@ -101,7 +101,7 @@ public class SensorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
-			int rs = st.executeUpdate("INSERT INTO Sensors VALUES (" + e.getActID() + ", " + e.getSenName() + ", " + e.getSenState() + ", " + );
+			int rs = st.executeUpdate("INSERT INTO Sensors VALUES (" + e.getActID() + ", " + e.getSenName() + ", " + e.getSenState() + ", " + e.getUpdateTime() + ", " + e.getUpdateData() + ", " + e.getActID() + ", " + e.getUnit() + ", " + e.getType() + ";");
 			
 			st.close();
 			conn.close();
@@ -109,6 +109,21 @@ public class SensorDAO {
 			return (rs==0) ? false : true;
 		} catch (SQLException e1) {
 			e1.printStackTrace();
+		}
+		return false;
+	}
+
+	public static boolean updateSensor(Sensor sen) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			int rs = st.executeUpdate("UPDATE Sensors SET SenID='"+ sen.getSensorID() + "', SenName='" + sen.getSenName() + "', SenState=" + sen.getSenState() + ", " + sen.getUpdateTime() + ", " + sen.getUpdateData() + ", " + sen.getActID() + ", " + sen.getUnit() + ", " + sen.getType() + ";" );
+			
+			st.close();
+			conn.close();
+			return (rs==0) ? false : true;
+		} catch (SQLException exception) {
+			exception.printStackTrace();
 		}
 		return false;
 	}
