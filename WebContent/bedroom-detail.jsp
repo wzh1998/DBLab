@@ -1,6 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ page import="ie.ucd.comp2004J.*" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -28,10 +29,25 @@
     <link href="css/owl.theme.css" rel="stylesheet">
     <link href="css/on3step-style.css" rel="stylesheet">
     <link href="css/queries-on3step.css" media="all" rel="stylesheet">
+    
+    <script>
+	function alertNull(){
+	alert("This is already The last Page!");
+	window.document.location.href="environment.jsp";
+	}
+	</script>
   </head>
   
   <body class="black">
-  
+  	<%List<Sensor> sensors = SensorDAO.getSensorsByRoom("Bedroom");%>
+  	<%
+	if(sensors.isEmpty()) {%> 
+	<script type="text/javascript">alertNull();</script> 
+	<%
+	}
+	%>
+	
+	
     <!-- preloader -->
     <div class="bg-preloader-white"></div>
     <div class="bg-preloader-white-bot"></div>
@@ -208,30 +224,40 @@
                     <!-- sticky detail -->
                     <div class="stiky-detail">
                       <div class="detaillist">
-                        <h2>Projects Detail</h2>
+                        <h2>Sensor Detail</h2>
                         <span>
-                          <strong>Categories</strong><span>:</span> 
-                          Architect, Renovation, Tilling
+                          <strong>Sensor ID</strong><span>:</span> 
+                          <%Sensor s1 = sensors.get(1);	%>
+                          <%=s1.getSensorID() %>
                         </span>
                         <span>
-                          <strong>Client</strong><span>:</span> 
-                          Johny Dono
+                          <strong>Sensor Name</strong><span>:</span> 
+                          <%=s1.getSenName() %>
                         </span>
                         <span>
-                          <strong>Date</strong><span>:</span>
-                          Apr 05, 2017
+                          <strong>Sensor Type</strong><span>:</span>
+                          <%=s1.getType() %>
                         </span>
                         <span>
-                          <strong>Budget</strong><span>:</span>
-                          $ 8,00,000
+                          <strong>Sensor State</strong><span>:</span>
+                          <%= s1.getSenState()==1 ? "ON" : "OFF" %>
                         </span>
                         <span>
-                          <strong>Duration</strong><span>:</span>
-                          6 Months
+                          <strong>Control Actuator</strong><span>:</span>
+                          <%=s1.getActID() %>
+                          
                         </span>
                         <span>
-                          <strong>Tags</strong><span>:</span>
-                          Commercial
+                          <strong>Last Update Time</strong><span>:</span>
+                          <%=s1.getUpdateTime() %>
+                        </span>
+                        <span>
+                          <strong>Last Update Date</strong><span>:</span>
+                          <%=s1.getUpdateData() %>
+                        </span>
+                        <span>
+                          <strong>Unit</strong><span>:</span>
+                          <%=s1.getUnit() %>
                         </span>
                       </div>
                       <div class="hide-detail">HIDE DETAIL &rarr;</div>

@@ -127,11 +127,7 @@ public class SensorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
-<<<<<<< HEAD
 			int rs = st.executeUpdate("INSERT INTO Sensors VALUES (" + e.getSensorID() + ", '" + e.getSenName() + "', " + e.getSenState() + ", '" + e.createTime() + "', '" + e.getUpdateData() + "', " + e.getActID() + ", '" + e.getUnit() + "', '" + e.getType() + "', '" + e.getRoom() + "');");
-=======
-			int rs = st.executeUpdate("INSERT INTO Sensors VALUES (" + e.getActID() + ", " + e.getSenName() + ", " + e.getSenState() + ", " + e.getUpdateTime() + ", " + e.getUpdateData() + ", " + e.getActID() + ", " + e.getUnit() + ", " + e.getType() + ";");
->>>>>>> afcb264b8cbc87c2abf8e78ded9778d468e376bd
 			
 			st.close();
 			conn.close();
@@ -147,11 +143,7 @@ public class SensorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
-<<<<<<< HEAD
 			int rs = st.executeUpdate("UPDATE Sensors SET SenName='" + sen.getSenName() + "', SenState=" + sen.getSenState() + ", UpdateTime='" + sen.createTime() + "', UpdateData='" + sen.getUpdateData() + "', ActID=" + sen.getActID() + ", Unit='" + sen.getUnit() + "', Type='" + sen.getType() + "', Room='" + sen.getRoom() + "' WHERE SensorID=" + sen.getSensorID() + ";" );
-=======
-			int rs = st.executeUpdate("UPDATE Sensors SET SenID='"+ sen.getSensorID() + "', SenName='" + sen.getSenName() + "', SenState=" + sen.getSenState() + ", " + sen.getUpdateTime() + ", " + sen.getUpdateData() + ", " + sen.getActID() + ", " + sen.getUnit() + ", " + sen.getType() + ";" );
->>>>>>> afcb264b8cbc87c2abf8e78ded9778d468e376bd
 			
 			st.close();
 			conn.close();
@@ -160,6 +152,62 @@ public class SensorDAO {
 			exception.printStackTrace();
 		}
 		return false;
+	}
+	
+	
+	public static List<Sensor> getSensorsByRoom(String room) {
+		List<Sensor> Sensors = new ArrayList<Sensor>();
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();
+			
+			ResultSet rs = st.executeQuery("SELECT * FROM Sensors WHERE Room=" + room);
+			while(rs.next()) {
+				int SensorID = rs.getInt("SensorID");
+				String SenName = rs.getString("SenName");
+				int SenState = rs.getInt("SenState");
+				@SuppressWarnings("deprecation")
+				java.sql.Timestamp UpdateTime_t = rs.getTimestamp("UpdateTime");	
+				Date date = new Date(UpdateTime_t.getTime());
+                SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+				String UpdateTime = sdf.format(date);
+				
+				String UpdateData = rs.getString("UpdateData");
+				int ActID = rs.getInt("ActID");
+				String Unit = rs.getString("Unit");
+				String Type = rs.getString("Type");
+				String Room = rs.getString("Room");
+				
+				Sensor e = new Sensor(SensorID, SenName, SenState, UpdateTime, UpdateData, ActID, Unit, Type, Room);
+				
+				Sensors.add(e);
+			}
+//			while(rs.next()) {
+//				
+//				int SensorID = rs.getInt("SensorID");
+//				String SenName = rs.getString("SenName");
+//				int SenState = rs.getInt("SenState");
+//				@SuppressWarnings("deprecation")
+//				String UpdateTime = rs.getTime("UpdateTime").toGMTString();
+//				String UpdateData = rs.getString("UpdateData");
+//				int ActID = rs.getInt("ActID");
+//				
+//				String Unit = rs.getString("Unit");
+//				String Type = rs.getString("Type");
+//				String Room = rs.getString("Room");
+//				
+//				Sensor e = new Sensor(SensorID, SenName, SenState, UpdateTime, UpdateData, ActID, Unit, Type, Room);
+//				
+//				Sensors.add(e);
+//			}
+			
+			rs.close();
+			st.close();
+			conn.close();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Sensors;
 	}
 }
 
