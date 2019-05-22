@@ -127,7 +127,11 @@ public class SensorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
+<<<<<<< HEAD
 			int rs = st.executeUpdate("INSERT INTO Sensors VALUES (" + e.getSensorID() + ", '" + e.getSenName() + "', " + e.getSenState() + ", '" + e.createTime() + "', '" + e.getUpdateData() + "', " + e.getActID() + ", '" + e.getUnit() + "', '" + e.getType() + "', '" + e.getRoom() + "');");
+=======
+			int rs = st.executeUpdate("INSERT INTO Sensors VALUES (" + e.getActID() + ", " + e.getSenName() + ", " + e.getSenState() + ", " + e.getUpdateTime() + ", " + e.getUpdateData() + ", " + e.getActID() + ", " + e.getUnit() + ", " + e.getType() + ";");
+>>>>>>> afcb264b8cbc87c2abf8e78ded9778d468e376bd
 			
 			st.close();
 			conn.close();
@@ -143,7 +147,11 @@ public class SensorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
+<<<<<<< HEAD
 			int rs = st.executeUpdate("UPDATE Sensors SET SenName='" + sen.getSenName() + "', SenState=" + sen.getSenState() + ", UpdateTime='" + sen.createTime() + "', UpdateData='" + sen.getUpdateData() + "', ActID=" + sen.getActID() + ", Unit='" + sen.getUnit() + "', Type='" + sen.getType() + "', Room='" + sen.getRoom() + "' WHERE SensorID=" + sen.getSensorID() + ";" );
+=======
+			int rs = st.executeUpdate("UPDATE Sensors SET SenID='"+ sen.getSensorID() + "', SenName='" + sen.getSenName() + "', SenState=" + sen.getSenState() + ", " + sen.getUpdateTime() + ", " + sen.getUpdateData() + ", " + sen.getActID() + ", " + sen.getUnit() + ", " + sen.getType() + ";" );
+>>>>>>> afcb264b8cbc87c2abf8e78ded9778d468e376bd
 			
 			st.close();
 			conn.close();
