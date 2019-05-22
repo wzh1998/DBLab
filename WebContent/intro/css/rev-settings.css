@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+.big-heading{
+font-family: 'Poppins', sans-serif;
+font-size:46pt;
+line-height:normal;
+color:#fff;
+letter-spacing:2px;
+font-weight:600;
+text-transform:uppercase;
+}
+.sub-heading{
+font-family: 'Poppins', sans-serif;
+font-size: 28pt;
+line-height:normal;
+color:#fff;
+letter-spacing:2px;
+font-weight:300;
+text-transform:uppercase;
+}
+.sub-heading-small{
+font-family: 'Poppins', sans-serif;
+font-size: 14pt;
+line-height:normal;
+color:#fff;
+letter-spacing:8px;
+font-weight:300;
+text-transform:uppercase;
+text-align:center;
+}
+
+	
+@media only screen and (max-width: 1024px) {
+.bg-img{ display:none;}
+}

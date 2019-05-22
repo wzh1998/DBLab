@@ -19,7 +19,7 @@ if(u==null){
 }
 else{
 	session.setAttribute("user", u);
-	response.sendRedirect("employeeList.jsp?Page=1");
+	response.sendRedirect("mainMenu.jsp");
 	
 	//User u2 = (User)session.getAttribute("user");
 }
@@ -34,7 +34,7 @@ else{
 <script>
 function alertFailed(){
 	alert("Wrong Password or Username, Please Try Again!");
-	window.document.location.href="index.jsp";
+	window.document.location.href="index-black.html";
 }
 </script>
 
