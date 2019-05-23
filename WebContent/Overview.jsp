@@ -1,5 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -46,6 +47,7 @@ html, body {
   margin: 0;
   background: #fdfdfd;
   font-family: 'Open Sans', sans-serif;
+  width: 100%;
 }
 
 .center_radius, .thermostat, .thermostat .bar, .thermostat .center, .thermostat .center .small {
@@ -58,8 +60,10 @@ html, body {
 
 .thermostat {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  left:400px;
+  top:1111px;
+  width: 200px;
+  height: 200px;
   background: #6D697F;
   box-shadow: inset 0px -6px 1px 2px rgba(0, 0, 0, 0.35), 0px 7px 40px 11px rgba(84, 81, 97, 0.4);
 }
@@ -490,7 +494,7 @@ html, body {
   
   <div class="flex" >
     <div class="info">
-      <h2 class="info__title">Paul's Home</h2>
+      <h2 class="info__title">Logic's Home</h2>
       <div class="info__time">5:21 PM</div>
     </div>
     <div class="menu">

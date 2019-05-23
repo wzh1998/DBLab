@@ -21,7 +21,7 @@
     <link href="css/datepicker.min.css" rel="stylesheet">
     <!-- revolution slider css -->
     
-	  <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
     <!-- on3step CSS -->
     <link href="css/animated-on3step.css" rel="stylesheet">
@@ -222,12 +222,13 @@
                       </div>
                     </div>
                     <!-- sticky detail -->
+                    <%Sensor s0 = sensors.get(0);	%>
                     <div class="stiky-detail">
                       <div class="detaillist" style="height: 450px;">
                         <!-- <h2>Sensor Detail</h2> -->
                         <span>
                           <strong>Sensor ID</strong><span>:</span> 
-                          <%Sensor s0 = sensors.get(0);	%>
+                          
                           <%=s0.getSensorID() %>
                         </span>
                         <span>
@@ -240,7 +241,7 @@
                         </span>
                         <span>
                           <strong>Sensor State</strong><span>:</span>
-                          <%= s0.getSenState()==1 ? "ON" : "OFF" %>
+                          <%=s0.getSenState()==1 ? "ON" : "OFF" %>
                         </span>
                         <span>
                           <strong>Control Actuator</strong><span>:</span>
