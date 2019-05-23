@@ -135,5 +135,22 @@ public class ActuatorDAO {
 		}
 		return false;
 	}
+	
+	public static boolean insertAlarm(Alarm ala) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			System.out.print("INSERT INTO Alarm VALUES (" + ala.getActID() + ", '" + ala.getASwitch()+"');");
+			int rs = st.executeUpdate("INSERT INTO Alarms VALUES (" + ala.getActID() + ", " + ala.getASwitch() + "');" );	
+			st.close();
+			conn.close();
+			
+			return (rs==0) ? false : true;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return false;
+	}
 }
+
 

@@ -161,7 +161,7 @@ public class SensorDAO {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();
 			
-			ResultSet rs = st.executeQuery("SELECT * FROM Sensors WHERE Room=" + room);
+			ResultSet rs = st.executeQuery("SELECT * FROM Sensors WHERE Room='" + room + "';");
 			while(rs.next()) {
 				int SensorID = rs.getInt("SensorID");
 				String SenName = rs.getString("SenName");

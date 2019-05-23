@@ -126,7 +126,7 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="setActuators.jsp">Device
+                 <a href="setActuators.jsp?Page=1">Device
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
@@ -223,8 +223,64 @@
                     </div>
                     <!-- sticky detail -->
                     <div class="stiky-detail">
-                      <div class="detaillist">
-                        <h2>Sensor Detail</h2>
+                      <div class="detaillist" style="height: 450px;">
+                        <!-- <h2>Sensor Detail</h2> -->
+                        <span>
+                          <strong>Sensor ID</strong><span>:</span> 
+                          <%Sensor s0 = sensors.get(0);	%>
+                          <%=s0.getSensorID() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Name</strong><span>:</span> 
+                          <%=s0.getSenName() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Type</strong><span>:</span>
+                          <%=s0.getType() %>
+                        </span>
+                        <span>
+                          <strong>Sensor State</strong><span>:</span>
+                          <%= s0.getSenState()==1 ? "ON" : "OFF" %>
+                        </span>
+                        <span>
+                          <strong>Control Actuator</strong><span>:</span>
+                          <%=s0.getActID() %>
+                          
+                        </span>
+                        <span>
+                          <strong>Last Update Time</strong><span>:</span>
+                          <%=s0.getUpdateTime() %>
+                        </span>
+                        <span>
+                          <strong>Last Update Date</strong><span>:</span>
+                          <%=s0.getUpdateData() %>
+                        </span>
+                        <span>
+                          <strong>Unit</strong><span>:</span>
+                          <%=s0.getUnit() %>
+                        </span>
+                      </div>
+                      <div class="hide-detail">HIDE DETAIL &rarr;</div>
+                      <div class="show-detail">&larr; SHOW DETAIL</div>
+                    </div>
+                    <!-- sticky detail end -->
+                    </div>
+
+
+
+
+                    <div class="item">
+                    <div class="gal-home">
+                      <div class="hovereffect">
+                        <a class="big-img-1" href="img/gallery-home/img2.jpg">
+                          <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img2.jpg">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sticky detail -->
+                    <div class="stiky-detail">
+                      <div class="detaillist" style="height: 450px;">
+                        <!-- <h2>Sensor Detail</h2> -->
                         <span>
                           <strong>Sensor ID</strong><span>:</span> 
                           <%Sensor s1 = sensors.get(1);	%>
@@ -266,52 +322,6 @@
                     <!-- sticky detail end -->
                     </div>
 
-
-
-
-                    <div class="item">
-                    <div class="gal-home">
-                      <div class="hovereffect">
-                        <a class="big-img-1" href="img/gallery-home/img2.jpg">
-                          <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img2.jpg">
-                        </a>
-                      </div>
-                    </div>
-                    <!-- sticky detail -->
-                    <div class="stiky-detail">
-                      <div class="detaillist">
-                        <h2>Projects Detail</h2>
-                        <span>
-                          <strong>Categories</strong><span>:</span> 
-                          Architect, Renovation, Tilling
-                        </span>
-                        <span>
-                          <strong>Client</strong><span>:</span> 
-                          Johny Dono
-                        </span>
-                        <span>
-                          <strong>Date</strong><span>:</span>
-                          Apr 05, 2017
-                        </span>
-                        <span>
-                          <strong>Budget</strong><span>:</span>
-                          $ 8,00,000
-                        </span>
-                        <span>
-                          <strong>Duration</strong><span>:</span>
-                          6 Months
-                        </span>
-                        <span>
-                          <strong>Tags</strong><span>:</span>
-                          Commercial
-                        </span>
-                      </div>
-                      <div class="hide-detail">HIDE DETAIL &rarr;</div>
-                      <div class="show-detail">&larr; SHOW DETAIL</div>
-                    </div>
-                    <!-- sticky detail end -->
-                    </div>
-
                     <div class="item">
                     <div class="gal-home">
                       <div class="hovereffect">
@@ -322,31 +332,41 @@
                     </div>
                     <!-- sticky detail -->
                     <div class="stiky-detail">
-                      <div class="detaillist">
-                        <h2>Projects Detail</h2>
+                      <div class="detaillist" style="height: 450px;">
+                        <!-- <h2>Sensor Detail</h2> -->
                         <span>
-                          <strong>Categories</strong><span>:</span> 
-                          Architect, Renovation, Tilling
+                          <strong>Sensor ID</strong><span>:</span> 
+                          <%Sensor s2 = sensors.get(2);	%>
+                          <%=s2.getSensorID() %>
                         </span>
                         <span>
-                          <strong>Client</strong><span>:</span> 
-                          Johny Dono
+                          <strong>Sensor Name</strong><span>:</span> 
+                          <%=s2.getSenName() %>
                         </span>
                         <span>
-                          <strong>Date</strong><span>:</span>
-                          Apr 05, 2017
+                          <strong>Sensor Type</strong><span>:</span>
+                          <%=s2.getType() %>
                         </span>
                         <span>
-                          <strong>Budget</strong><span>:</span>
-                          $ 8,00,000
+                          <strong>Sensor State</strong><span>:</span>
+                          <%= s2.getSenState()==1 ? "ON" : "OFF" %>
                         </span>
                         <span>
-                          <strong>Duration</strong><span>:</span>
-                          6 Months
+                          <strong>Control Actuator</strong><span>:</span>
+                          <%=s2.getActID() %>
+                          
                         </span>
                         <span>
-                          <strong>Tags</strong><span>:</span>
-                          Commercial
+                          <strong>Last Update Time</strong><span>:</span>
+                          <%=s2.getUpdateTime() %>
+                        </span>
+                        <span>
+                          <strong>Last Update Date</strong><span>:</span>
+                          <%=s2.getUpdateData() %>
+                        </span>
+                        <span>
+                          <strong>Unit</strong><span>:</span>
+                          <%=s2.getUnit() %>
                         </span>
                       </div>
                       <div class="hide-detail">HIDE DETAIL &rarr;</div>

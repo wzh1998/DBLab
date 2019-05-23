@@ -109,7 +109,7 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="setActuators.jsp">Device
+                 <a href="setActuators.jsp?Page=1">Device
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
