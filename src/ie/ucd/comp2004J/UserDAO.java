@@ -28,7 +28,6 @@ public class UserDAO {
 				String email = rs.getString("Mail");
 				User u = new User(un,p,email);
 				return u;
-	
 			}
 			
 			

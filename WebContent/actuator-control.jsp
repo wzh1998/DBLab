@@ -367,8 +367,8 @@ input[type="checkbox"].switch_2:checked:after{
 
               <!--- Editing ending ---->
     <tr>
-    <td><a data-toggle="modal" data-target=<%="#actEdit_"+ act.getActID() %>>Edit</a>&nbsp<a href=<%="confirmDeletingActuator.jsp?ActID=" + act.getActID() %>>Delete</a></td>
-
+    <td><a data-toggle="modal" data-target=<%="#actEdit_"+ act.getActID() %>>Edit</a>&nbsp<a href=<%="confirmDeletingActuator.jsp?ActID=" + act.getActID() %>>Delete</a>&nbsp<a href="http://39.108.231.244/XHProject/addtempkeyDBHW.php"> <%= (act.getActID() > 2000 && act.getActID() < 3000) ? "Send Temp Key" : ""%> </a></td>
+	
     <td><%=act.getActID()%></td>
     <td><%=act.getActName()%></td>
     <td><%=act.getActID()<2000? "Alarm" : (act.getActID()<3000?"Bluetooth Lock" :(act.getActID()<4000?"Curtain":(act.getActID()<5000?"Humidifier":"Lamp")) )%></td>

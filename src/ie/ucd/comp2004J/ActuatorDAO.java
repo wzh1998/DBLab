@@ -149,11 +149,30 @@ public class ActuatorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
-			System.out.print("INSERT INTO Actuators VALUES (" + act.getActID() + ", " + act.getActState() + " , '" + act.getActName() + "');");
-			int rs = st.executeUpdate("INSERT INTO Actuators VALUES (" + act.getActID() + ", " + act.getActState() + " , '" + act.getActName() + "');" );	
+			int rs = st.executeUpdate("INSERT INTO Actuators VALUES (" + act.getActID() + ", " + act.getActState() + ", '" + act.getActName() + "');" );	
 			st.close();
 			conn.close();
 			
+			if(act.getActID() < 2000) {
+				Alarm ala = new Alarm(act.getActID(), 0);
+				insertAlarm(ala);
+			}
+			else if(act.getActID() < 3000) {
+				BTLock lock = new BTLock(act.getActID(), 0, "abba00cae7dea870", "", "");
+				insertBTLock(lock);
+			}
+			else if(act.getActID() < 4000) {
+				Curtain cur = new Curtain(act.getActID(), 90);
+				insertCurtain(cur);
+			}
+			else if(act.getActID() < 5000) {
+				Humidifier hum = new Humidifier(act.getActID(), 500, 10);
+				insertHumidifier(hum);
+			}
+			else {
+				Lamp lamp = new Lamp(act.getActID(), 1);
+				insertLamp(lamp);
+			}
 			return (rs==0) ? false : true;
 		} catch (SQLException e1) {
 			e1.printStackTrace();
@@ -165,8 +184,23 @@ public class ActuatorDAO {
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();	
-			System.out.print("INSERT INTO Alarm VALUES (" + ala.getActID() + ", '" + ala.getASwitch()+"');");
-			int rs = st.executeUpdate("INSERT INTO Alarms VALUES (" + ala.getActID() + ", " + ala.getASwitch() + "');" );	
+			int rs = st.executeUpdate("INSERT INTO Alarm VALUES (" + ala.getActID() + ", 0);" );	
+			st.close();
+			conn.close();
+		
+			
+			return (rs==0) ? false : true;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return false;
+	}
+	public static boolean insertBTLock(BTLock lock) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			System.out.print("INSERT INTO BTLock VALUES (" + lock.getActID() + ", " + lock.getState() + ", '" + lock.getBTKey() + "', '" + lock.getTempKey()+ "', '"+lock.getTempKeyStartTime() +  "');");
+			int rs = st.executeUpdate("INSERT INTO BTLock VALUES (" + lock.getActID() + ", " + lock.getState() + ", '" + lock.getBTKey() + "', '" + lock.getTempKey()+ "', '"+lock.getTempKeyStartTime() + "');");	
 			st.close();
 			conn.close();
 			
@@ -176,6 +210,52 @@ public class ActuatorDAO {
 		}
 		return false;
 	}
+	public static boolean insertCurtain(Curtain cur) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			System.out.print("INSERT INTO Curtain VALUES (" + cur.getActID() + ", " + cur.getCrack() + ");");
+			int rs = st.executeUpdate("INSERT INTO Curtain VALUES (" + cur.getActID() + ", " + cur.getCrack() + ");");	
+			st.close();
+			conn.close();
+			
+			return (rs==0) ? false : true;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return false;
+	}
+	public static boolean insertHumidifier(Humidifier hum) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			System.out.print("INSERT INTO Humidifier VALUES (" + hum.getActID() + ", " + hum.getWaterVolume() + ", " + hum.getHSwitch() +  ");");
+			int rs = st.executeUpdate("INSERT INTO Humidifier VALUES (" + hum.getActID() + ", " + hum.getWaterVolume() + ", " + hum.getHSwitch() +  ");");	
+			st.close();
+			conn.close();
+			
+			return (rs==0) ? false : true;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return false;
+	}
+	public static boolean insertLamp(Lamp lamp) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			System.out.print("INSERT INTO Lamp VALUES (" + lamp.getActID() + ", " + lamp.getMode() + ");");
+			int rs = st.executeUpdate("INSERT INTO Lamp VALUES (" + lamp.getActID() + ", " + lamp.getMode() + ");");	
+			st.close();
+			conn.close();
+			
+			return (rs==0) ? false : true;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return false;
+	}
+	
 }
 
 
