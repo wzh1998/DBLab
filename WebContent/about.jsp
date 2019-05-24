@@ -133,7 +133,7 @@
                  </a>
                  
                 <li>
-                 <a href="about-team.jsp">Contact
+                 <a class="actived" href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
 
@@ -236,6 +236,7 @@
                                         <p>Co-Founder</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
+                                       <p>16206563</p>
                                         <!-- <div class="post-share">
                                           <ul class="share-list">
                                             <li>

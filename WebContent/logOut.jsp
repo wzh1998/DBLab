@@ -18,8 +18,8 @@ if(u==null){
 	response.sendRedirect("index.jsp");
 }
 else{
-	session.setAttribute("user", u);
-	response.sendRedirect("Overview.jsp");
+	session.invalidate();
+	response.sendRedirect("index.jsp");
 	
 	//User u2 = (User)session.getAttribute("user");
 }

@@ -127,7 +127,7 @@
                  </a>
                  
                 <li>
-                 <a href="about-team.jsp">Contact
+                 <a class="actived" href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
@@ -177,7 +177,7 @@
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
                                         <div class="post-share">
-                                          <p>1620****</p>
+                                          <p>16206561</p>
                                           <!-- <ul class="share-list">
                                             <li>
                                               <a href="#" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
@@ -441,7 +441,7 @@
             <div class="bottom-footer">
               <div class="row">
                 <div class="col-sm-6 copyright sm-text-center">
-                  <span>© 2019 WZH-WYC-SJX, All Right <a href="http://www.17sucai.com/" title="17sucai">Reserved</a></span>
+                  <span>© 2019 Intelligent Home Control System, All Right Reserved</span>
                 </div>
                 </div>
               </div>

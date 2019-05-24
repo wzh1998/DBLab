@@ -411,54 +411,35 @@ html, body {
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="setActuators.jsp?Page=1">Device
+                 <a class="actived" href="Overview.jsp">Overview
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
                 </li>
+
+                <li>
+                 <a href="actuator-control.jsp?Page=1">Device
+                  <span class="hidden-lg span-drop"></span>
+                 </a>
+                </li>
+
+               
+
                 <li>
                  <a href="environment.jsp">Environment
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
-                </li>
-                <li><a href="#">Works
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="works.html">Works-2-col</a></li>
-<li><a href="works-black.html">Works Black</a></li>
-                    <li><a href="works-3-col.html">Works-3-col</a></li>
-                    <li><a href="projects-detail.html">Projects Detail</a></li>
-                    <li><a href="projects-detail-2-col.html">Projects Detail 2</a></li></ul>
-                </li>
-                <li><a  href="#">Gallery
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="gallery.html">Gallery</a></li>
-<li><a href="gallery-black.html">Gallery Black</a></li>
-<li><a href="gallery-filter.html">Gallery Filter</a></li>
-<li><a href="gallery-filter-black.html">Gallery Filter Black</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Blog
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                  <ul>
-                    <li><a href="blog.html">Blog Single</a></li>
-<li><a href="blog-black.html">Blog Black</a></li>
-                    <li><a href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
                 <li>
                  <a href="about-team.html">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
-                    <li><a href="about-team.html">Our Team</a></li>
+                    <li><a href="about-team.jsp">Our Team</a></li>
+                  	<li><a href="about-team.jsp">Team Members</a></li>
                  </ul>
                 </li>
+
               </ul>
             </nav>
           </div>

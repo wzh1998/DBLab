@@ -184,16 +184,17 @@ input[type="checkbox"].switch_2:checked:after{
           </div>
           
           <div class="right">
-          <!--   <div id="sub-icon" class="social-icons-subnav hidden-sm hidden-xs">
-                <a href="#"><span class="ti-facebook"></span></a>
-                <a href="#"><span class="ti-dribbble"></span></a>
-                <a href="#"><span class="ti-twitter"></span></a>
-                <a href="#"><span class="ti-instagram"></span></a>
-                <a href="#"><span class="ti-linkedin"></span></a>
-            </div> -->
+            <div id="sub-icon" class="social-icons-subnav hidden-sm hidden-xs">
+                
+                
+                <a href="logOut.jsp"><span>Log Out</span></a>
+                
+            </div>
             <div class="social-icons-subnav">
-                <a data-toggle="modal" data-target="#fLogin"><span class="ti-lock"></span> Login</a>
-                <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a>
+            	<% User u = (User)session.getAttribute("user"); %>
+                <a data-toggle="modal" ><span class="ti-lock"></span> Hi <%=u.getUsername() %>, Welcome back!</a>
+                <!-- <a data-toggle="modal" ><span class="ti-lock"></span> Log Out</a> -->
+                <!-- <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a> -->
             </div>
           </div>
             
@@ -228,56 +229,35 @@ input[type="checkbox"].switch_2:checked:after{
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="setActuators.jsp?Page=1">Device
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 
-                </li>
-                <li>
-                 <a class="actived" href="viewSensors.jsp">Environment
+                 <a href="Overview.jsp">Overview
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
                 </li>
 
-                <li><a href="#">Works
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="works.html">Works-2-col</a></li>
-<li><a href="works-black.html">Works Black</a></li>
-                    <li><a href="works-3-col.html">Works-3-col</a></li>
-                    <li><a href="projects-detail.html">Projects Detail</a></li>
-                    <li><a href="projects-detail-2-col.html">Projects Detail 2</a></li></ul>
-                </li>
-                <li><a  href="#">Gallery
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="gallery.html">Gallery</a></li>
-<li><a href="gallery-black.html">Gallery Black</a></li>
-<li><a href="gallery-filter.html">Gallery Filter</a></li>
-<li><a href="gallery-filter-black.html">Gallery Filter Black</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Blog
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                  <ul>
-                    <li><a href="blog.html">Blog Single</a></li>
-<li><a href="blog-black.html">Blog Black</a></li>
-                    <li><a href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
                 <li>
-                 <a href="#">Contact
+                 <a class="actived" href="actuator-control.jsp?Page=1">Device
+                  <span class="hidden-lg span-drop"></span>
+                 </a>
+                </li>
+
+               
+
+                <li>
+                 <a href="environment.jsp">Environment
+                  <span class="hidden-lg span-drop"></span>
+                 </a>
+                 
+                <li>
+                 <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
-                    <li><a  href="contact.html">Contact</a></li>
-          <li><a  href="contact-black.html">Contact Black</a></li>
+                    <li><a href="about-team.jsp">Our Team</a></li>
+                 	<li><a href="about-team.jsp">Team Members</a></li>
                  </ul>
                 </li>
+
               </ul>
             </nav>
           </div>
@@ -379,16 +359,10 @@ input[type="checkbox"].switch_2:checked:after{
     }
     %> </table>
     </div>
-    <button type="button" class="btn btn-default" <%= disableButtonUp %> onclick="window.location.href='actuator-control.jsp?
-    page=<%=Page - 1%>';">Previous</button>
-    Page
-    <%=currentPage%>/<%=totalPages+1%>
-    <button type="button" class="btn btn-default" <%=
-    disableButtonNext%> onclick="window.location.href='actuator-control.jsp?
-    page=<%= Page + 1%>';">Next</button>
+    <button type="button" class="btn btn-default" <%= disableButtonUp %> onclick="window.location.href='actuator-control.jsp?Page=<%=Page - 1%>';">Previous</button>Page<%=currentPage%>/<%=totalPages%>
+    <button type="button" class="btn btn-default" <%=disableButtonNext%> onclick="window.location.href='actuator-control.jsp?Page=<%= Page + 1%>';">Next</button>
     </div>
     
-
       <!--  gallery home end --> 
 
           <div class="container-fluid m-5-hor">

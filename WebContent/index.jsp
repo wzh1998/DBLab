@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
@@ -106,61 +106,16 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a class="actived" href="#">Home
+                 <a class="actived" href="index.jsp">Home
+                  <span class="hidden-lg span-drop"></span>
+                 </a>
+                 
+                 <a href="about-team.html">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
-                    <li><a href="index.html">Index</a></li>
-<li><a href="index-black.html">Index Black</a></li>
-                    <li><a href="intro/index.html">Intro</a></li>
-                 </ul>
-                </li>
-                <li>
-                 <a href="#">Pages
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-<li><a href="about-black.html">About Black</a></li>
-                    <li><a href="about-team.html">About Team</a></li>
-                 </ul>
-                </li>
-                <li><a href="#">Works
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="works.html">Works-2-col</a></li>
-<li><a href="works-black.html">Works Black</a></li>
-                    <li><a href="works-3-col.html">Works-3-col</a></li>
-                    <li><a href="projects-detail.html">Projects Detail</a></li>
-                    <li><a href="projects-detail-2-col.html">Projects Detail 2</a></li></ul>
-                </li>
-                <li><a  href="#">Gallery
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="gallery.html">Gallery</a></li>
-<li><a href="gallery-black.html">Gallery Black</a></li>
-<li><a href="gallery-filter.html">Gallery Filter</a></li>
-<li><a href="gallery-filter-black.html">Gallery Filter Black</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Blog
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                  <ul>
-                    <li><a href="blog.html">Blog Single</a></li>
-<li><a href="blog-black.html">Blog Black</a></li>
-                    <li><a href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
-                <li>
-                 <a href="#">Contact
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 <ul>
-                    <li><a  href="contact.html">Contact</a></li>
-					<li><a  href="contact-black.html">Contact Black</a></li>
+                    <li><a href="about-team.jsp">Our Team</a></li>
+                  	<li><a href="about-team.jsp">Team Members</a></li>
                  </ul>
                 </li>
               </ul>
@@ -212,7 +167,7 @@
                                 data-speed="400"
                                 data-start="800"
                                 data-easing="easeInOutExpo">
-                                <span class="shine"></span><a href="#" >More Detail &rarr;</a>
+                                <span class="shine" data-target="#fLogin"></span>More Detail &rarr;
                             </div>
 
                         </li>
@@ -294,301 +249,13 @@
   </section>
   <!-- revolution slider end -->
   
-  <!-- about home -->
-  <section aria-label="about">
-    <div class="container-fluid m-5-hor">
-      <div class="row">
-
-        <div class="col-md-6 onStep" data-animation="fadeInLeft" data-time="300">
-          <h2 class="heading">
-            ABOUT US 
-          </h2>
-          <h3 class="headingcontent">
-            We Are <br>
-            Architecture<br>
-            Design<br>
-          </h3>
-          <p class="content">
-            Donec at cursus sem. Duis condimentum posuere purus, at venenatis tellus mollis. Vestibulum cursus convallis venenatis. Sed ut blandit mauris. Lorem non suscipit. Proin pretium consequat est, sit amet consectetur luctus vel. Etiam quis interdum felis, at pellentesque metus.
-          </p>
-          <div class="year">
-            <div class="heading">23</div>
-            <div class="subheading dd4425">Year <br>Experience<br> Working</div>
-          </div>
-        </div>
-
-        <div class="col-md-5 col-md-offset-1 onStep" data-animation="fadeInRight" data-time="600">
-          <div id="imghome" class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="gal-home">
-                  <div class="projects-grid">
-                      <div class="hovereffect-color ">
-                        <img class="img-responsive imgmain" alt="imghome" src="img/imghome1.jpg">
-                          <div class="overlay start-align">
-                            <div>
-                              <h3>DESIGN <br> INTERIOR <br> HOUZEZ</h3>
-                              <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
-                              MORE DETAIL &rarr;
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="gal-home">
-                  <div class="projects-grid">
-                      <div class="hovereffect-color ">
-                        <img class="img-responsive imgmain" alt="imghome" src="img/imghome2.jpg">
-                          <div class="overlay">
-                            <div class="start-align">
-                              <h3>REDESIGN <br> CO-WORKING <br> ROOM</h3>
-                              <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
-                              MORE DETAIL &rarr;
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="gal-home">
-                  <div class="projects-grid">
-                      <div class="hovereffect-color ">
-                        <img class="img-responsive imgmain" alt="imghome" src="img/imghome3.jpg">
-                          <div class="overlay">
-                            <div class="start-align">
-                              <h3>DESIGN <br> INTERIOR <br> BALCONY</h3>
-                              <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
-                              MORE DETAIL &rarr;
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- about home end -->
-
-      <!--  gallery home --> 
-      <section  aria-label="projects">
-        <div class="container-fluid m-5-hor">
-          <div class="row">
-          
-          <div class="col-md-12">
-            <div class="wrapheading">
-              <h1 class="heading no-top">PROJECTS</h1>
-              <h2 >OUR <br>PROJECTS</h2>
-            </div>
-
-                 <div class="onStep" data-animation="fadeInUp" data-time="0">
-                 <div id="owl-gal" class="owl-carousel">
-                            
-                             <div class="item">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img1.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>Co-working room</h4>
-                                        <p>Interior</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
-                                        </a>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="item">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img2.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>The-working place</h4>
-                                        <p>Interior</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
-                                        </a>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="item">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img3.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>Rest-working room</h4>
-                                        <p>Interior</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
-                                        </a>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="item">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img4.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>Co-working room</h4>
-                                        <p>Interior</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
-                                        </a>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="item">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img5.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>The-working place</h4>
-                                        <p>Interior</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
-                                        </a>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="item">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img6.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4>Rest-working room</h4>
-                                        <p>Interior</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
-                                          see projects &rarr;
-                                        </a>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>  
-                              
-                 </div>
-                 </div>
-
-        </div>
-
-       </div>
-      </div>
-      </section> 
-      <!--  gallery home end --> 
-
-      <!--  tagline --> 
-      <section class="dot" aria-label="tagline">
-        <div class="container-fluid m-5-hor">
-          <div class="row">
-          
-              <div class="col-md-12">
-                <div class="wrapheading">
-                  <h1 class="heading">ABOUT OUR VISION</h1>
-                </div>
-                <p class="tagline">Architectural works of art, in the material form of buildings, are often perceived as cultural symbols and as works of art. Historical civilizations are often identified with their surviving architectural achievements.</p>
-              </div>  
-
-          </div>
-        </div>
-      </section>
-      <!--  tagline end --> 
-
-
-       <!-- footer -->
-       <footer class="footer">
-        <div class="container-fluid m-5-hor">
-          <div class="footer-widgets">
-            <div class="row">
-              <div class="col-md-8 col-sm-12 col-xs-12">
-                <div class="widget footer-links">
-                  <ul class="list-menu">
-                    <li><a href="#">TERMS</a></li>
-                    <li><a href="#">CONTRACT</a></li>
-                    <li>
-                      <ul>
-                        <li><a class="active" href="#">ENG</a></li>
-                        <li><a href="#">FRA</a></li>
-                        <li><a href="#">GER</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-4 col-sm-12 col-xs-12">
-              <div class="search-container text-right">
-                <form action="#">
-                  <input class="s-input-home" type="text" placeholder="Search…" name="search">
-                  <button class="btn-s-input" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-              </div>
-
-            </div>
-          </div>
-        </div><!-- end container -->
-          <div class="container-fluid m-5-hor">
+	<div class="container-fluid m-5-hor">
             <div class="bottom-footer">
               <div class="row">
                 <div class="col-sm-6 copyright">
-                  <span>© 2019 Concreate, All Right <a href="http://www.17sucai.com/" title="17sucai">Reserved</a></span>
+                  <span>� 2019 Intelligent Home Control System, All Right Reserved</span>
                 </div>
-                <div class="col-sm-6 col-xs-12">
+                <!-- <div class="col-sm-6 col-xs-12">
                   <div class="social-icons">
                     <a href="#"><i class="fa fa-facebook"></i></a> 
                     <a href="#"><i class="fa fa-pinterest"></i></a> 
@@ -596,13 +263,11 @@
                     <a href="#"><i class="fa fa-twitter"></i></a> 
                     <a href="#"><i class="fa fa-instagram"></i></a>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
-          </div><!-- end bottom footer -->
-      </footer>
-      <!-- footer end -->
-      
+          </div>
+
       
       <!-- ScrolltoTop -->
       <div id="totop" class="init">

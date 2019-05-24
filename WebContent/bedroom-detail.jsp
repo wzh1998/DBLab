@@ -94,7 +94,7 @@
                 
             </div>
             <div class="social-icons-subnav">
-            	<% User u = (User)session.getAttribute("user"); %>
+      			<% User u = (User)session.getAttribute("user"); %>
                 <a data-toggle="modal" ><span class="ti-lock"></span> Hi <%=u.getUsername() %>, Welcome back!</a>
                 <!-- <a data-toggle="modal" ><span class="ti-lock"></span> Log Out</a> -->
                 <!-- <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a> -->
@@ -132,55 +132,36 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="setActuators.jsp?Page=1">Device
+                 <a href="Overview.jsp">Overview
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
                 </li>
+
+                <li>
+                 <a href="actuator-control.jsp?Page=1">Device
+                  <span class="hidden-lg span-drop"></span>
+                 </a>
+                </li>
+
+                
+              
+
                 <li>
                  <a class="actived" href="environment.jsp">Environment
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
-                </li>
-                <li><a href="#">Works
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="works.html">Works-2-col</a></li>
-<li><a href="works-black.html">Works Black</a></li>
-                    <li><a href="works-3-col.html">Works-3-col</a></li>
-                    <li><a href="projects-detail.html">Projects Detail</a></li>
-                    <li><a href="projects-detail-2-col.html">Projects Detail 2</a></li></ul>
-                </li>
-                <li><a  href="#">Gallery
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                <ul>
-                    <li><a href="gallery.html">Gallery</a></li>
-<li><a href="gallery-black.html">Gallery Black</a></li>
-<li><a href="gallery-filter.html">Gallery Filter</a></li>
-<li><a href="gallery-filter-black.html">Gallery Filter Black</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Blog
-                  <span class="hidden-lg span-drop"></span>
-                </a>
-                  <ul>
-                    <li><a href="blog.html">Blog Single</a></li>
-<li><a href="blog-black.html">Blog Black</a></li>
-                    <li><a href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
                 <li>
-                 <a href="#">Contact
+                 <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
-                    <li><a  href="contact.html">Contact</a></li>
-					<li><a  href="contact-black.html">Contact Black</a></li>
+                    <li><a href="about-team.jsp">Our Team</a></li>
+                  	<li><a href="about-team.jsp">Team Members</a></li>
                  </ul>
                 </li>
+
               </ul>
             </nav>
           </div>
@@ -393,7 +374,25 @@
       </div>
       </section> 
       <!--  projects detail end --> 
-
+      
+			<div class="container-fluid m-5-hor">
+            <div class="bottom-footer">
+              <div class="row">
+                <div class="col-sm-6 copyright">
+                  <span>© 2019 Intelligent Home Control System, All Right Reserved</span>
+                </div>
+                <!-- <div class="col-sm-6 col-xs-12">
+                  <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a> 
+                    <a href="#"><i class="fa fa-pinterest"></i></a> 
+                    <a href="#"><i class="fa fa-tumblr"></i></a> 
+                    <a href="#"><i class="fa fa-twitter"></i></a> 
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div><!-- end bottom footer -->
        
       
       
