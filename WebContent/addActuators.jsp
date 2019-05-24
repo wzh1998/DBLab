@@ -34,7 +34,11 @@
   </head>
   
   <body class="black">
-  
+  	<%
+  	if(session.getAttribute("user") == null) {
+  		response.sendRedirect("index.jsp");
+  	} 
+  	%>
     <!-- preloader -->
     <div class="bg-preloader-white"></div>
     <div class="bg-preloader-white-bot"></div>
@@ -64,7 +68,7 @@
 
           <div class="left">
             <div class="social-icons-subnav hidden-xs">
-                <div>Call Us : +02151 7778 009</div>
+                <div>Contact Us : Beijing-Dublin International College</div>
             </div>
           </div>
           

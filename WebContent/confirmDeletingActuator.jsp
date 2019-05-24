@@ -39,9 +39,9 @@ $(document).ready(function() {
 <body>
 <%
 
-/* if(session.getAttribute("user") == null) {
+ if(session.getAttribute("user") == null) {
 	response.sendRedirect("index.jsp");
-} */
+} 
 
 int ActID = Integer.parseInt(request.getParameter("ActID"));
 

@@ -30,7 +30,11 @@
   </head>
   
   <body class="black">
-  
+  	<%
+  	if(session.getAttribute("user") == null) {
+  		response.sendRedirect("index.jsp");
+  	} 
+  	%>
     <!-- preloader -->
     <div class="bg-preloader-white"></div>
     <div class="bg-preloader-white-bot"></div>

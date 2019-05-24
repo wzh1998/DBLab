@@ -42,7 +42,7 @@ public class ActuatorDAO {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();
 			
-			ResultSet rs = st.executeQuery("SELECT * FROM Actuator");
+			ResultSet rs = st.executeQuery("SELECT * FROM Actuators");
 			
 			while(rs.next()) {
 				int ActID = rs.getInt("ActID");
@@ -60,6 +60,31 @@ public class ActuatorDAO {
 			e.printStackTrace();
 		}
 		return (int) Math.ceil(actuators.size()/5.0);
+	}
+	public static int getActCount() {
+		List<Actuator> actuators = new ArrayList<Actuator>();
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();
+			
+			ResultSet rs = st.executeQuery("SELECT * FROM Actuators");
+			
+			while(rs.next()) {
+				int ActID = rs.getInt("ActID");
+				String ActName = rs.getString("ActName");
+				int ActState = rs.getInt("ActState");
+				Actuator act = new Actuator(ActID, ActName, ActState);
+				
+				actuators.add(act);
+			}
+			
+			rs.close();
+			st.close();
+			conn.close();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return actuators.size();
 	}
 	
 	public static Actuator getActuatorByID(int aid) {

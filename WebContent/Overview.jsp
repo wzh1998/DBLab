@@ -1,6 +1,9 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ page import="ie.ucd.comp2004J.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.*" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -20,7 +23,7 @@
     <!-- date picker CSS -->
     <link href="css/datepicker.min.css" rel="stylesheet">
     <!-- revolution slider css -->
-	  <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
     <!-- on3step CSS -->
     <link href="css/animated-on3step.css" rel="stylesheet">
@@ -357,6 +360,11 @@ html, body {
   </head>
   
   <body class="black">
+  <%
+  if(session.getAttribute("user") == null) {
+  	response.sendRedirect("index.jsp");
+  } 
+  %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- preloader -->
     <div class="bg-preloader-white"></div>
@@ -444,12 +452,11 @@ html, body {
                     </ul>
                 </li>
                 <li>
-                 <a href="#">Contact
+                 <a href="about-team.html">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
-                    <li><a href="contact.html">Contact</a></li>
-					<li><a  href="contact-black.html">Contact Black</a></li>
+                    <li><a href="about-team.html">Our Team</a></li>
                  </ul>
                 </li>
               </ul>
@@ -495,16 +502,22 @@ html, body {
   <div class="flex" >
     <div class="info">
       <h2 class="info__title">Logic's Home</h2>
-      <div class="info__time">5:21 PM</div>
+      <div class="info__time"> 
+
+      <% Date now = new Date( );
+      SimpleDateFormat ft = new SimpleDateFormat ("kk:mm"); %>
+
+      <%= 1==1? ("Current Time: " + ft.format(now)):1 %> 
+    </div>
     </div>
     <div class="menu">
       <ul class="menu__list">
-        <li class="menu__item menu__item--active">Activity</li>     
-        <li class="menu__item">Settings</li>
+  <!--       <li class="menu__item menu__item--active">Activity</li>     
+        <li class="menu__item">Settings</li> -->
       </ul>
-      <div class="flex">
+     <!--  <div class="flex">
         <div class="menu-border  one-half"></div>
-      </div>
+      </div> -->
     </div>
   </div>
   
@@ -514,7 +527,6 @@ html, body {
         <p>
           Total Consumption       
         </p>
-        <a href="/" onclick="return false;">PAY</a>
       </div>
       <h1 class="consumption">79 KWH ~ $89.90</h1>
       <svg id="visualisation" width="600" height="100"></svg>
@@ -554,13 +566,13 @@ html, body {
       <ul class="lamps__list">
         
         <li class="lamps__item  lamps__total">
-          <h2 class="lamps__count">15</h2>
-          <p class="lamps__description">Total Lamps</p>
+          <h2 class="lamps__count"><%=ActuatorDAO.getActCount()%></h2>
+          <p class="lamps__description">Total Actuators</p>
         </li>
         
         <li class="lamps__item  lamps__active">
-          <h2 class="lamps__count">4</h2>
-          <p class="lamps__description">Active Lamps</p>
+          <h2 class="lamps__count"><%=SensorDAO.getSenCount()%></h2>
+          <p class="lamps__description">Total Sensors</p>
         </li>
         
       </ul> 

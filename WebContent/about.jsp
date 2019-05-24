@@ -65,11 +65,17 @@
           </div>
           
           <div class="right">
-
-            <div class="social-icons-subnav">
-                <!-- <a data-toggle="modal" data-target="#fLogin"><span class="ti-lock"></span> Login</a>
-                <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a> -->
-            </div>
+            <!-- <div id="sub-icon" class="social-icons-subnav hidden-sm hidden-xs">
+                <a href="#"><span class="ti-facebook"></span></a>
+                <a href="#"><span class="ti-dribbble"></span></a>
+                <a href="#"><span class="ti-twitter"></span></a>
+                <a href="#"><span class="ti-instagram"></span></a>
+                <a href="#"><span class="ti-linkedin"></span></a>
+            </div> -->
+            <!-- <div class="social-icons-subnav">
+                <a data-toggle="modal" data-target="#fLogin"><span class="ti-lock"></span> Login</a>
+                <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a>
+            </div> -->
           </div>
             
          </div>
@@ -130,6 +136,7 @@
                  <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
+
                  <ul>
                   <li><a href="about.html">Our Team</a></li>
                   <li><a href="about-team.html">Team Members</a></li>
@@ -147,20 +154,73 @@
       </div>
       <!-- nav end -->
       </header>
+      
+      <!-- section img about -->
+      <section aria-label="subheader" class="no-top no-bottom" >
+        <div class="container-fluid">
+          <div class="row">
+                    <div class="gal-home">
+                      <div class="hovereffect">
+                        <a class="big-img-1" href="img/img-about.jpg">
+                          <img alt="imageportofolio" class="img-responsive" src="img/img-about.jpg">
+                        </a>
+                      </div>
+                    </div>
+          </div>
+        </div>
+      </section>
+      <!-- section img about end -->
+
+      <!-- section about -->
+      <section aria-label="Detail" id="about">
+            <div class="container-fluid m-5-hor">
+             <div class="row">
+
+                <!-- heading text -->   
+                <div class="col-md-4">
+                  <h1 class="heading no-top">
+                    About Us
+                  </h1>
+                  <h2 class="no-top">
+                   We Built Quality <br> Interior of Design
+                  </h2>
+                  
+                 </div>
+                 <!-- heading text end --> 
+                
+                <div class="col-md-8">
+                  <p>Donec posuere bibendum metus. Quisque gravida luctus volutpat mauris interdum lectus in dapibus molestie quam felis sollicitudin amet tempus velit lectus nec lorem. Nullam vel mollis neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel enim dui. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.
+                  </p>
+
+                  <p class="content">
+            Vestibulum cursus convallis venenatis. Sed ut blandit mauris. Lorem non suscipit. Proin pretium consequat est, sit amet consectetur luctus vel. Etiam quis interdum felis, at pellentesque metus.
+          </p>
+                </div>
+                
+
+                </div>
+            </div>
+        </section>
+      <!-- section about end --> 
 
       <!--  team --> 
-      <section  aria-label="projects">
+      <section  aria-label="projects" class="dot">
         <div class="container-fluid m-5-hor">
           <div class="row">
+
+                <!-- heading text -->   
+                <div class="col-md-4">
+                  <h1 class="heading no-top">
+                    OUR TEAM
+                  </h1>
+                  <h2 class="no-top">
+                   We Are <br> Profesional
+                  </h2>
+                  
+                 </div>
+                 <!-- heading text end --> 
                  
-           <div class="col-md-3">
-              <div class="wrapheading">
-                <h1 class="heading">OUR TEAM</h1>
-                <h2 class="headingcontent">We Are <br> Profesional</h2>
-              </div>
-            </div> 
-            
-                 <div class="col-md-9">
+                 <div class="col-md-8">
                   <div class="onStep" data-animation="fadeInUp" data-time="0">
                    <div id="owl-team" class="owl-carousel">
                             
@@ -176,9 +236,8 @@
                                         <p>Co-Founder</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <div class="post-share">
-                                          <p>1620****</p>
-                                          <!-- <ul class="share-list">
+                                        <!-- <div class="post-share">
+                                          <ul class="share-list">
                                             <li>
                                               <a href="#" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
                                             </li>
@@ -188,8 +247,8 @@
                                             <li>
                                               <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
                                             </li>
-                                          </ul> -->
-                                        </div>
+                                          </ul>
+                                        </div> -->
                                        </div>
                                  </div>
                                 </div>
@@ -208,6 +267,7 @@
                                         <p>Co-Founder</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
+
                                         <div class="post-share">
                                           <p>16206563</p>
                                           <!-- <ul class="share-list">
@@ -259,7 +319,7 @@
                                 </div>
                               </div>
                               </div>
-  
+
                     </div> 
                   </div>
                  </div>
@@ -268,109 +328,6 @@
        </div>
       </section> 
       <!--  team end -->
-
-      <!--  team column -->
-      <section  aria-label="projects" class="dot">
-        <div class="container-fluid m-5-hor">
-          <div class="row">
-
-             <div class="col-md-4">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/team/img1.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4 class="no-bottom">Yuchen Wang</h4>
-                                        <p>Co-Founder</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <div class="post-share text-right">
-                                          <!-- <ul class="share-list">
-                                            <li>
-                                              <a href="#" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                            </li>
-                                          </ul> -->
-                                        </div>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="col-md-4">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/team/img2.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4 class="no-bottom">Zihao Wang</h4>
-                                        <p>Co-Founder</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <div class="post-share text-right">
-                                          <!-- <ul class="share-list">
-                                            <li>
-                                              <a href="#" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                            </li>
-                                          </ul> -->
-                                        </div>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-                              <div class="col-md-4">
-                              <div class="gal-home">
-                                <div class="hovereffect">
-                                  <img alt="imageportofolio" class="img-responsive" src="img/team/img3.jpg">
-                                </div>
-                                <div class="gal-home-content">
-                                  <div class="row">
-                                       <div class="col-md-7 col-sm-6 col-xs-6"> 
-                                        <h4 class="no-bottom">Jingxiang Sun</h4>
-                                        <p>Co-Founder</p>
-                                       </div>
-                                       <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <div class="post-share text-right">
-                                          <!-- <ul class="share-list">
-                                            <li>
-                                              <a href="#" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                            </li>
-                                          </ul> -->
-                                        </div>
-                                       </div>
-                                 </div>
-                                </div>
-                              </div>
-                              </div>
-
-          </div>
-        </div>
-      </section>  
-      <!--  team column end -->
 
       <!-- brands-->
       <section id="brand"  aria-label="brands">
@@ -442,7 +399,6 @@
               <div class="row">
                 <div class="col-sm-6 copyright sm-text-center">
                   <span>© 2019 WZH-WYC-SJX, All Right <a href="http://www.17sucai.com/" title="17sucai">Reserved</a></span>
-                </div>
                 </div>
               </div>
             </div>

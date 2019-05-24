@@ -72,7 +72,7 @@ public class SensorDAO {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();
 			
-			ResultSet rs = st.executeQuery("SELECT * FROM employee");
+			ResultSet rs = st.executeQuery("SELECT * FROM Sensors");
 			
 			while(rs.next()) {
 				int SensorID = rs.getInt("SensorID");
@@ -104,7 +104,43 @@ public class SensorDAO {
 		return (int) Math.ceil(Sensors.size()/5.0);
 	}
 
-
+	public static int getSenCount() {
+		List<Sensor> Sensors = new ArrayList<Sensor>();
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();
+			
+			ResultSet rs = st.executeQuery("SELECT * FROM Sensors");
+			
+			while(rs.next()) {
+				int SensorID = rs.getInt("SensorID");
+				String SenName = rs.getString("SenName");
+				int SenState = rs.getInt("SenState");
+				@SuppressWarnings("deprecation")
+				java.sql.Timestamp UpdateTime_t = rs.getTimestamp("UpdateTime");
+				
+					
+				Date date = new Date(UpdateTime_t.getTime());
+				String UpdateTime = date.toString();
+				
+				String UpdateData = rs.getString("UpdateData");
+				int ActID = rs.getInt("ActID");
+				String Unit = rs.getString("Unit");
+				String Room = rs.getString("Room");
+				
+				Sensor e = new Sensor(ActID, Unit, ActID, Unit, Unit, ActID, Unit, Unit, Room);
+				
+				Sensors.add(e);
+			}
+			
+			rs.close();
+			st.close();
+			conn.close();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Sensors.size();
+	}
 	public static boolean deleteSensorByID(int SensorID) {
 		try {
 			Connection conn = JDBCTool.getConnection();

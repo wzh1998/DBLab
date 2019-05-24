@@ -39,6 +39,11 @@
   </head>
   
   <body class="black">
+  	<%
+  	if(session.getAttribute("user") == null) {
+  		response.sendRedirect("index.jsp");
+  	} 
+  	%>
   	<%List<Sensor> sensors = SensorDAO.getSensorsByRoom("Bedroom");%>
   	<%
 	if(sensors.isEmpty()) {%> 
@@ -77,21 +82,22 @@
 
           <div class="left">
             <div class="social-icons-subnav hidden-xs">
-                <div>Call Us : +02151 7778 009</div>
+                <div>Contact Us : Beijing-Dublin International College</div>
             </div>
           </div>
           
           <div class="right">
             <div id="sub-icon" class="social-icons-subnav hidden-sm hidden-xs">
-                <a href="#"><span class="ti-facebook"></span></a>
-                <a href="#"><span class="ti-dribbble"></span></a>
-                <a href="#"><span class="ti-twitter"></span></a>
-                <a href="#"><span class="ti-instagram"></span></a>
-                <a href="#"><span class="ti-linkedin"></span></a>
+                
+                
+                <a href="logOut.jsp"><span>Log Out</span></a>
+                
             </div>
             <div class="social-icons-subnav">
-                <a data-toggle="modal" data-target="#fLogin"><span class="ti-lock"></span> Login</a>
-                <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a>
+            	<% User u = (User)session.getAttribute("user"); %>
+                <a data-toggle="modal" ><span class="ti-lock"></span> Hi <%=u.getUsername() %>, Welcome back!</a>
+                <!-- <a data-toggle="modal" ><span class="ti-lock"></span> Log Out</a> -->
+                <!-- <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a> -->
             </div>
           </div>
             
