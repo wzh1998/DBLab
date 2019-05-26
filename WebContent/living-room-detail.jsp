@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.List" %>
 <%@ page import="ie.ucd.comp2004J.*" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
-    <title>Smart Home | Actuator Control</title>
+    <title>Smart Home | Living Room Detail</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
@@ -20,7 +20,8 @@
     <!-- date picker CSS -->
     <link href="css/datepicker.min.css" rel="stylesheet">
     <!-- revolution slider css -->
-    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+    
+	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
     <!-- on3step CSS -->
     <link href="css/animated-on3step.css" rel="stylesheet">
@@ -28,120 +29,13 @@
     <link href="css/owl.theme.css" rel="stylesheet">
     <link href="css/on3step-style.css" rel="stylesheet">
     <link href="css/queries-on3step.css" media="all" rel="stylesheet">
-
-    <link rel="stylesheet" 15 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <style>
-      /* Switch 1 Specific Styles Start */
-
-.box_1{
-  background: #eee;
-}
-
-input[type="checkbox"].switch_1{
-  font-size: 30px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 3.5em;
-  height: 1.5em;
-  background: #ddd;
-  border-radius: 3em;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  }
-  
-  input[type="checkbox"].switch_1:checked{
-  background: #0ebeff;
-  }
-  
-  input[type="checkbox"].switch_1:after{
-  position: absolute;
-  content: "";
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
-          box-shadow: 0 0 .25em rgba(0,0,0,.3);
-  -webkit-transform: scale(.7);
-          transform: scale(.7);
-  left: 0;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  }
-  
-  input[type="checkbox"].switch_1:checked:after{
-  left: calc(100% - 1.5em);
-  }
-  
-/* Switch 1 Specific Style End */
-/* Switch 2 Specific Style Start */
-
-.box_2{
-	background: #666;
-}
-
-input[type="checkbox"].switch_2{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100px;
-  height: 8px;
-  background: #444;
-  border-radius: 5px;
-  position: relative;
-  outline: 0;
-  cursor: pointer;
-}
-
-input[type="checkbox"].switch_2:before,
-input[type="checkbox"].switch_2:after{
-  position: absolute;
-  content: "";
-  -webkit-transition: all .25s;
-  transition: all .25s;
-}
-
-input[type="checkbox"].switch_2:before{
-  width: 40px;
-  height: 40px;
-  background: #ccc;
-  border: 5px solid #666;
-  border-radius: 50%;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-input[type="checkbox"].switch_2:after{
-  width: 30px;
-  height: 30px;
-  background: #666;
-  border-radius: 50%;
-  top: 50%;
-  left: 10px;
-  -webkit-transform: scale(1) translateY(-50%);
-          transform: scale(1) translateY(-50%);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-}
-
-input[type="checkbox"].switch_2:checked:before{
-  left: calc(100% - 35px);
-}
-
-input[type="checkbox"].switch_2:checked:after{
-  left: 75px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-/* Switch 2 Specific Style End */
-    </style>
+    
+    <script>
+	function alertNull(){
+	alert("This is already The last Page!");
+	window.document.location.href="environment.jsp";
+	}
+	</script>
   </head>
   
   <body class="black">
@@ -150,6 +44,15 @@ input[type="checkbox"].switch_2:checked:after{
   		response.sendRedirect("index.jsp");
   	} 
   	%>
+  	<%List<Sensor> sensors = SensorDAO.getSensorsByRoom("Living Room");%>
+  	<%
+	if(sensors.isEmpty()) {%> 
+	<script type="text/javascript">alertNull();</script> 
+	<%
+	}
+	%>
+	
+	
     <!-- preloader -->
     <div class="bg-preloader-white"></div>
     <div class="bg-preloader-white-bot"></div>
@@ -191,7 +94,7 @@ input[type="checkbox"].switch_2:checked:after{
                 
             </div>
             <div class="social-icons-subnav">
-            	<% User u = (User)session.getAttribute("user"); %>
+      			<% User u = (User)session.getAttribute("user"); %>
                 <a data-toggle="modal" ><span class="ti-lock"></span> Hi <%=u.getUsername() %>, Welcome back!</a>
                 <!-- <a data-toggle="modal" ><span class="ti-lock"></span> Log Out</a> -->
                 <!-- <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a> -->
@@ -213,7 +116,7 @@ input[type="checkbox"].switch_2:checked:after{
 
           <!-- logo --> 
           <a class="navbar-brand white" href="index.html">
-          <img alt="logo" src="img/logo-white.png">
+          <img alt="logo" src="img/logo.png">
           </a> 
           <!-- logo end -->
 
@@ -236,15 +139,16 @@ input[type="checkbox"].switch_2:checked:after{
                 </li>
 
                 <li>
-                 <a class="actived" href="actuator-control.jsp?Page=1">Device
+                 <a href="actuator-control.jsp?Page=1">Device
                   <span class="hidden-lg span-drop"></span>
                  </a>
                 </li>
 
-               
+                
+              
 
                 <li>
-                 <a href="environment.jsp">Environment
+                 <a class="actived" href="environment.jsp">Environment
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  
@@ -254,7 +158,7 @@ input[type="checkbox"].switch_2:checked:after{
                  </a>
                  <ul>
                     <li><a href="about-team.jsp">Our Team</a></li>
-                 	<li><a href="about-team.jsp">Team Members</a></li>
+                  	<li><a href="about-team.jsp">Team Members</a></li>
                  </ul>
                 </li>
 
@@ -270,108 +174,214 @@ input[type="checkbox"].switch_2:checked:after{
       <!-- nav end -->
       </header>
       
-      
-
-      <!--  gallery home --> 
-      <section  aria-label="projects">
+      <!--  breadcumb --> 
+      <section aria-label="breadcumb" class="no-padding crumbs">
         <div class="container-fluid m-5-hor">
           <div class="row">
-          
-          <div class="col-md-12">
-            <div class="wrapheading">
-              <h1 class="heading no-top">PROJECTS</h1>
-              <h2 >Our <br>Works</h2>
-              <h2 class="headingcontent">We Build Architectural & Design</h2>
-            </div>
-
-
-<div class="container">
-  <button type="button" class="btn btn-default" ><a data-toggle="modal" data-target="#addAct"><span></span> Add Actuators</a></button>
-  <br />
-  <div class="table-responsive">
-    <table class="table"> <thead>
-    <tr> <th></th> 
-    <th>Actuator ID</th> <th>Name</th> <th>Type</th> <th>State</th>
-    </tr> </thead>
-    <%
-    int currentPage = 1;
-    int numberPerPage = 5;
-    int totalPages = ActuatorDAO.getPageNum();
-    String requestPage = request.getParameter("Page"); 
-    if (requestPage != null) {
-    currentPage = Integer.parseInt(requestPage); 
-    }
-    int Page = currentPage;
-  List<Actuator> actuators = ActuatorDAO.getAllActuators(Page);
-  //Disable button when reaching first or last page.
-  String disableButtonNext = currentPage >= totalPages ? "disabled=\"disabled\"" : "";
-  String disableButtonUp = currentPage == 1 ? " disabled=\"disabled\"" : "";
-  
-    for (Actuator act : actuators) {
-    %> 
-    <!--- Editing starting --->
-
-              <div id=<%= "actEdit_" + act.getActID()%> class="modal fade">
-                <div class="modal-dialog modal-login">
-                  <div class="modal-content">
-                    <div class="modal-header">      
-                      <h4 class="modal-title">Actuator Editing</h4>
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                      <form method="post" action="confirmUpdateActuator.jsp">
-                        <div class="form-group">
-                        <label>Actuator Serial No.</label>
-                        <input type="text" name="ActID" class="form-control" readonly="true" value="<%=act.getActID() %>" placeholder="<%=act.getActID() %>">
-                        </div>
-                        <div class="form-group">
-                        <label>Actuator Name</label>
-                        <input type="text" name="ActName" class="form-control"  placeholder="<%=act.getActName() %>" required>
-                        </div>
-                        <div class="form-group">
-                        <label>Actuator State</label>
-
-                        <input type="checkbox" name="ActState" class="switch_1" style="left: 75px; top: 13px;" value="on">
-                        <br />
-                        <br />
-                        <br />
-                        <div class="form-group"><input type="submit" value="Confirm Changing" class="btn btn-primary btn-block btn-lg"></div>
-                        </div>    
-                      </form>         
-                    </div>
-                    
-                  </div>
-                </div>
+            <div class="col-md-12">
+              <h1 class="crumbs">Projects</h1>
+                <ul id="crumbs">
+                  <li><a href="#">home</a></li>
+                  <li>Projects Detail</li>
+                </ul>
               </div>
+          </div>
+        </div>
+      </section>
+      <!--  breadcumb end --> 
+
+      <!--  projects detail --> 
+      <section  aria-label="projects" class="no-padding">
+        <div class="container-fluid m-5-hor">
+          <div class="row">
+                
+                <!-- detail project --> 
+
+                <div id="detailproject" class="col-md-12">
+                 <div id="owl-detail" class="owl-carousel">
+                   <div class="item">
+                    <div class="gal-home">
+                      <div class="hovereffect">
+
+                        <a class="big-img-1" href="img/gallery-home/img1.jpg">
+                          <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img1.jpg">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sticky detail -->
+                    <%Sensor s0 = sensors.get(0);	%>
+                    <div class="stiky-detail">
+                      <div class="detaillist" style="height: 450px;">
+                        <!-- <h2>Sensor Detail</h2> -->
+                        <span>
+                          <strong>Sensor ID</strong><span>:</span> 
+                          
+                          <%=s0.getSensorID() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Name</strong><span>:</span> 
+                          <%=s0.getSenName() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Type</strong><span>:</span>
+                          <%=s0.getType() %>
+                        </span>
+                        <span>
+                          <strong>Sensor State</strong><span>:</span>
+                          <%=s0.getSenState()==1 ? "ON" : "OFF" %>
+                        </span>
+                        <span>
+                          <strong>Control Actuator</strong><span>:</span>
+                          <%=s0.getActID() %>
+                          
+                        </span>
+                        <span>
+                          <strong>Last Update Time</strong><span>:</span>
+                          <%=s0.getUpdateTime() %>
+                        </span>
+                        <span>
+                          <strong>Last Update Date</strong><span>:</span>
+                          <%=s0.getUpdateData() %>
+                        </span>
+                        <span>
+                          <strong>Unit</strong><span>:</span>
+                          <%=s0.getUnit() %>
+                        </span>
+                      </div>
+                      <div class="hide-detail">HIDE DETAIL &rarr;</div>
+                      <div class="show-detail">&larr; SHOW DETAIL</div>
+                    </div>
+                    <!-- sticky detail end -->
+                    </div>
 
 
-              <!--- Editing ending ---->
-    <tr>
-    <td><a data-toggle="modal" data-target=<%="#actEdit_"+ act.getActID() %>>Edit</a>&nbsp<a href=<%="confirmDeletingActuator.jsp?ActID=" + act.getActID() %>>Delete</a>&nbsp<a href="http://39.108.231.244/XHProject/addtempkeyDBHW.php"> <%= (act.getActID() > 2000 && act.getActID() < 3000) ? "Send Temp Key" : ""%> </a></td>
-	
-    <td><%=act.getActID()%></td>
-    <td><%=act.getActName()%></td>
-    <td><%=act.getActID()<2000? "Alarm" : (act.getActID()<3000?"Bluetooth Lock" :(act.getActID()<4000?"Curtain":(act.getActID()<5000?"Humidifier":"Lamp")) )%></td>
-    <td><%=act.getActState()==1 ? "ON" : "OFF"%></td>
-    </tr>
-    
-    <%
-    }
-    %> </table>
-    </div>
-    <button type="button" class="btn btn-default" <%= disableButtonUp %> onclick="window.location.href='actuator-control.jsp?Page=<%=Page - 1%>';">Previous</button>Page<%=currentPage%>/<%=totalPages%>
-    <button type="button" class="btn btn-default" <%=disableButtonNext%> onclick="window.location.href='actuator-control.jsp?Page=<%= Page + 1%>';">Next</button>
-    </div>
-    
-      <!--  gallery home end --> 
 
-          <div class="container-fluid m-5-hor">
+
+                    <div class="item">
+                    <div class="gal-home">
+                      <div class="hovereffect">
+                        <a class="big-img-1" href="img/gallery-home/img2.jpg">
+                          <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img2.jpg">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sticky detail -->
+                    <div class="stiky-detail">
+                      <div class="detaillist" style="height: 450px;">
+                        <!-- <h2>Sensor Detail</h2> -->
+                        <span>
+                          <strong>Sensor ID</strong><span>:</span> 
+                          <%Sensor s1 = sensors.get(1);	%>
+                          <%=s1.getSensorID() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Name</strong><span>:</span> 
+                          <%=s1.getSenName() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Type</strong><span>:</span>
+                          <%=s1.getType() %>
+                        </span>
+                        <span>
+                          <strong>Sensor State</strong><span>:</span>
+                          <%= s1.getSenState()==1 ? "ON" : "OFF" %>
+                        </span>
+                        <span>
+                          <strong>Control Actuator</strong><span>:</span>
+                          <%=s1.getActID() %>
+                          
+                        </span>
+                        <span>
+                          <strong>Last Update Time</strong><span>:</span>
+                          <%=s1.getUpdateTime() %>
+                        </span>
+                        <span>
+                          <strong>Last Update Date</strong><span>:</span>
+                          <%=s1.getUpdateData() %>
+                        </span>
+                        <span>
+                          <strong>Unit</strong><span>:</span>
+                          <%=s1.getUnit() %>
+                        </span>
+                      </div>
+                      <div class="hide-detail">HIDE DETAIL &rarr;</div>
+                      <div class="show-detail">&larr; SHOW DETAIL</div>
+                    </div>
+                    <!-- sticky detail end -->
+                    </div>
+
+                    <div class="item">
+                    <div class="gal-home">
+                      <div class="hovereffect">
+                        <a class="big-img-1" href="img/gallery-home/img3.jpg">
+                          <img alt="imageportofolio" class="img-responsive" src="img/gallery-home/img3.jpg">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sticky detail -->
+                    <div class="stiky-detail">
+                      <div class="detaillist" style="height: 450px;">
+                        <!-- <h2>Sensor Detail</h2> -->
+                        <span>
+                          <strong>Sensor ID</strong><span>:</span> 
+                          <%Sensor s2 = sensors.get(2);	%>
+                          <%=s2.getSensorID() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Name</strong><span>:</span> 
+                          <%=s2.getSenName() %>
+                        </span>
+                        <span>
+                          <strong>Sensor Type</strong><span>:</span>
+                          <%=s2.getType() %>
+                        </span>
+                        <span>
+                          <strong>Sensor State</strong><span>:</span>
+                          <%= s2.getSenState()==1 ? "ON" : "OFF" %>
+                        </span>
+                        <span>
+                          <strong>Control Actuator</strong><span>:</span>
+                          <%=s2.getActID() %>
+                          
+                        </span>
+                        <span>
+                          <strong>Last Update Time</strong><span>:</span>
+                          <%=s2.getUpdateTime() %>
+                        </span>
+                        <span>
+                          <strong>Last Update Date</strong><span>:</span>
+                          <%=s2.getUpdateData() %>
+                        </span>
+                        <span>
+                          <strong>Unit</strong><span>:</span>
+                          <%=s2.getUnit() %>
+                        </span>
+                      </div>
+                      <div class="hide-detail">HIDE DETAIL &rarr;</div>
+                      <div class="show-detail">&larr; SHOW DETAIL</div>
+                    </div>
+                    <!-- sticky detail end -->
+                    </div> 
+
+                  </div>
+                  
+                 </div>
+                 <!-- detail project end -->    
+                
+                
+
+       </div>
+      </div>
+      </section> 
+      <!--  projects detail end --> 
+      
+			<div class="container-fluid m-5-hor">
             <div class="bottom-footer">
               <div class="row">
                 <div class="col-sm-6 copyright">
-                  <span>© 2019 Concreate, All Right <a href="http://www.17sucai.com/" title="17sucai">Reserved</a></span>
+                  <span>© 2019 Intelligent Home Control System, All Right Reserved</span>
                 </div>
-                <div class="col-sm-6 col-xs-12">
+                <!-- <div class="col-sm-6 col-xs-12">
                   <div class="social-icons">
                     <a href="#"><i class="fa fa-facebook"></i></a> 
                     <a href="#"><i class="fa fa-pinterest"></i></a> 
@@ -379,18 +389,17 @@ input[type="checkbox"].switch_2:checked:after{
                     <a href="#"><i class="fa fa-twitter"></i></a> 
                     <a href="#"><i class="fa fa-instagram"></i></a>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div><!-- end bottom footer -->
-      </footer>
-      <!-- footer end -->
+       
       
       
       <!-- ScrolltoTop -->
       <div id="totop" class="init">
         &uarr;
-      </div>  
+      </div>   
 
               <!-- modal login -->
               <div id="fLogin" class="modal fade">
@@ -469,39 +478,8 @@ input[type="checkbox"].switch_2:checked:after{
                 </div>
               </div>
               <!-- modal registration end -->      
-              <!--- registrition starting  --->
-              <div id="addAct" class="modal fade">
-                <div class="modal-dialog modal-login">
-                  <div class="modal-content">
-                    <div class="modal-header">      
-                      <h4 class="modal-title">Adding New Actuator</h4>
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                      <form method="post" action="confirmAddingActuator.jsp">
-                        <div class="form-group">
-                        <label>Actuator Serial No.</label>
-                        <input type="text" name="ActID" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                        <label>Actuator Name</label>
-                        <input type="text" name="ActName" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group"><input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg"></div>
-                        <div class="clearfix"></div>
-                      </form>       
-                      
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
 
-              <!--- registrition ending  --->
-              
-
-
+     
     </div>
     <!-- content wraper end --> 
     

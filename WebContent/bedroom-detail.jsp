@@ -6,7 +6,7 @@
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
-    <title>Concreate | Interior Architecture Template</title>
+    <title>Smart Home | Bedroom Detail</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">

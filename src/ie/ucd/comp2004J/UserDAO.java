@@ -45,5 +45,20 @@ public class UserDAO {
 		
 		return null;
 	}
+	public static boolean insertUser(User e) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			int rs = st.executeUpdate("INSERT INTO Users VALUES (" + e.getEmpno() + ", '" + e.getName()+ "' , '" + e.getJob() + "' ,"  + e.getSalary() + "," + e.getDeptno()  + ");" );	
+			
+			st.close();
+			conn.close();
+			
+			return (rs==0) ? false : true;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return false;
+	}
 
 }

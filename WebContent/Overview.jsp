@@ -8,7 +8,7 @@
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
-    <title>Concreate | Interior Architecture Template</title>
+    <title>Smart Home | Overview</title>
     <script src="js/jquery.min.js"></script>
     <meta content="" name="description">
     <meta content="" name="author">
@@ -392,10 +392,9 @@ html, body {
         <div class="row">
         
 
-          <!-- logo --> 
+           <!-- logo --> 
           <a class="navbar-brand white" href="index.html">
-          <!-- <img alt="logo" src="img/logo-white.png"> -->
-          IHCS
+          <img alt="logo" src="img/logo-white.png">
           </a> 
           <!-- logo end -->
 

@@ -138,8 +138,8 @@
                  </a>
 
                  <ul>
-                  <li><a href="about.html">Our Team</a></li>
-                  <li><a href="about-team.html">Team Members</a></li>
+                  <li><a href="about.jsp">Our Team</a></li>
+                  <li><a href="about-team.jsp">Team Members</a></li>
                  </ul>
                 </li>
 

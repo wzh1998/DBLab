@@ -2,12 +2,10 @@ package ie.ucd.comp2004J;
 
 public class User {
 	
+	
 	private String username;
 	private String password;
 	private String email;
-	
-	
-	
 	
 	
 	public User(String username, String password, String email) {

@@ -2,7 +2,7 @@
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
-    <title>Concreate | Interior Architecture Template</title>
+    <title>Smart Home | Welcome Page</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
@@ -57,7 +57,7 @@
 
           <div class="left">
             <div class="social-icons-subnav hidden-xs">
-                <div>Call Us : +02151 7778 009</div>
+                <div>Contact Us : Beijing-Dublin International College</div>
             </div>
           </div>
           
@@ -109,8 +109,10 @@
                  <a class="actived" href="index.jsp">Home
                   <span class="hidden-lg span-drop"></span>
                  </a>
-                 
-                 <a href="about-team.html">Contact
+                </li>
+                
+                <li>
+                 <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
@@ -119,6 +121,7 @@
                  </ul>
                 </li>
               </ul>
+              
             </nav>
           </div>
           <!-- mainmenu end -->
@@ -167,7 +170,8 @@
                                 data-speed="400"
                                 data-start="800"
                                 data-easing="easeInOutExpo">
-                                <span class="shine" data-target="#fLogin"></span>More Detail &rarr;
+                                <span class="shine"></span><a data-toggle="modal" data-target="#fLogin">More Detail</a> &rarr;
+                                
                             </div>
 
                         </li>
@@ -298,9 +302,9 @@
                       </form>       
                       
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                       <a href="#">or Sign Up</a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -344,9 +348,9 @@
                       </form>       
                       
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                       <a href="#">or Log In</a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>

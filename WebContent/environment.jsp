@@ -7,7 +7,7 @@
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
-    <title>Concreate | Interior Architecture Template</title>
+    <title>Smart Home | Environment</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
@@ -136,7 +136,7 @@
                  </a>
                  
                 <li>
-                 <a href="about-team.html">Contact
+                 <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
@@ -209,7 +209,7 @@
                                         <p>Interior</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="room-detail.dsp">
+                                        <a class="shin col" href="living-room-detail.jsp">
                                           see details &rarr;
                                         </a>
                                        </div>
@@ -230,7 +230,7 @@
                                         <p>Interior</p>
                                        </div>
                                        <div class="col-md-5 col-sm-6 col-xs-6"> 
-                                        <a class="shin col" href="projects-detail.html">
+                                        <a class="shin col" href="kitchen-detail.jsp">
                                           see details &rarr;
                                         </a>
                                        </div>
