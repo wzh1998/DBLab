@@ -266,7 +266,7 @@ html, body {
   font-weight: 300;
 }
 .thermostat .center .small .heat:after {
-  content: '°';
+  content: '%';
   display: block;
   position: absolute;
   font-size: 40px;
@@ -393,7 +393,7 @@ html, body {
         
 
            <!-- logo --> 
-          <a class="navbar-brand white" href="index.html">
+          <a class="navbar-brand white" href="index.jsp">
           <img alt="logo" src="img/logo-white.png">
           </a> 
           <!-- logo end -->

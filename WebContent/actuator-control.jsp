@@ -212,7 +212,7 @@ input[type="checkbox"].switch_2:checked:after{
         
 
           <!-- logo --> 
-          <a class="navbar-brand white" href="index.html">
+          <a class="navbar-brand white" href="index.jsp">
           <img alt="logo" src="img/logo-white.png">
           </a> 
           <!-- logo end -->
@@ -349,7 +349,12 @@ input[type="checkbox"].switch_2:checked:after{
     <tr>
     <td><a data-toggle="modal" data-target=<%="#actEdit_"+ act.getActID() %>>Edit</a>&nbsp<a href=<%="confirmDeletingActuator.jsp?ActID=" + act.getActID() %>>Delete</a>&nbsp<a href="http://39.108.231.244/XHProject/addtempkeyDBHW.php"> <%= (act.getActID() > 2000 && act.getActID() < 3000) ? "Send Temp Key" : ""%> </a></td>
 	
-    <td><%=act.getActID()%></td>
+    <td>
+    <div title= "<%= (act.getActID() > 4000 && act.getActID() < 5000) ? ("Water Volume: " + String.valueOf(ActuatorDAO.getVolumn(act.getActID()))) : "" %>">
+ 	<p><%=act.getActID()%></p>
+	</div>
+	</td>
+
     <td><%=act.getActName()%></td>
     <td><%=act.getActID()<2000? "Alarm" : (act.getActID()<3000?"Bluetooth Lock" :(act.getActID()<4000?"Curtain":(act.getActID()<5000?"Humidifier":"Lamp")) )%></td>
     <td><%=act.getActState()==1 ? "ON" : "OFF"%></td>

@@ -89,7 +89,7 @@
         
 
           <!-- logo --> 
-          <a class="navbar-brand white" href="index.html">
+          <a class="navbar-brand white" href="index.jsp">
           <img alt="logo" src="img/logo-white.png">
           </a> 
           <!-- logo end -->

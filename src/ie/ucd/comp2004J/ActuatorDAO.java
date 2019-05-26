@@ -153,7 +153,7 @@ public class ActuatorDAO {
 			st.close();
 			conn.close();
 			
-			if(act.getActID() < 2000) {
+			if(act.getActID() < 2000) {//
 				Alarm ala = new Alarm(act.getActID(), 0);
 				insertAlarm(ala);
 			}
@@ -161,15 +161,15 @@ public class ActuatorDAO {
 				BTLock lock = new BTLock(act.getActID(), 0, "abba00cae7dea870", "", "");
 				insertBTLock(lock);
 			}
-			else if(act.getActID() < 4000) {
+			else if(act.getActID() < 4000) {//
 				Curtain cur = new Curtain(act.getActID(), 90);
 				insertCurtain(cur);
 			}
-			else if(act.getActID() < 5000) {
+			else if(act.getActID() < 5000) {//
 				Humidifier hum = new Humidifier(act.getActID(), 500, 10);
 				insertHumidifier(hum);
 			}
-			else {
+			else {//
 				Lamp lamp = new Lamp(act.getActID(), 1);
 				insertLamp(lamp);
 			}
@@ -255,7 +255,25 @@ public class ActuatorDAO {
 		}
 		return false;
 	}
+	public static int getVolumn(int aid) {
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();	
+			ResultSet rs = st.executeQuery("SELECT * FROM Humidifier WHERE ActID=" + aid);
+			rs.next();
+			
+			int volumn = rs.getInt("WaterVolume");
+				
+			rs.close();
+			st.close();
+			conn.close();
 	
+			return volumn;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}		
+	return 0;
+	}
 }
 
 
