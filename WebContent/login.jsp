@@ -20,7 +20,8 @@ out.print(password);
 User u = UserDAO.login(username, password);
 
 if(u==null){
-	response.sendRedirect("index.jsp");
+	
+	
 }
 else{
 	session.setAttribute("user", u);
@@ -41,5 +42,6 @@ else{
 </head>
 <body>
 <script type="text/javascript">alertFailed();</script>
+<%-- <%response.sendRedirect("index.jsp"); %> --%>
 </body>
 </html>

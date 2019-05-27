@@ -71,8 +71,8 @@
             </div> -->
             <div class="social-icons-subnav">
                 <a data-toggle="modal" data-target="#fLogin"><span class="ti-lock"></span> Login</a>
-                <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a>
-            </div>
+<!--                 <a data-toggle="modal" data-target="#fsignUp"><span class="ti-user"></span> Sign up</a>
+ -->            </div>
           </div>
             
          </div>
@@ -205,7 +205,7 @@
                                 data-speed="400"
                                 data-start="800"
                                 data-easing="easeInOutExpo">
-                                <span class="shine"></span><a href="#" >More Detail &rarr;</a>
+                                <span class="shine"></span><a data-toggle="modal" data-target="#fLogin">More Detail</a> &rarr;
                             </div>
 
                         </li>
@@ -239,7 +239,7 @@
                                 data-speed="400"
                                 data-start="800"
                                 data-easing="easeInOutExpo">
-                                <span class="shine"></span><a href="#" >More Detail &rarr;</a>
+                                <span class="shine"></span><a data-toggle="modal" data-target="#fLogin">More Detail</a> &rarr;
                             </div>
 
                         </li>
