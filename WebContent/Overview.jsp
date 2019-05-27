@@ -266,10 +266,10 @@ html, body {
   font-weight: 300;
 }
 .thermostat .center .small .heat:after {
-  content: '%';
+  content: '℃';
   display: block;
   position: absolute;
-  font-size: 40px;
+  font-size: 28px;
   top: -20px;
   right: 30px;
 }
@@ -428,9 +428,9 @@ html, body {
                  <a href="environment.jsp">Environment
                   <span class="hidden-lg span-drop"></span>
                  </a>
-                 
+                </li> 
                 <li>
-                 <a href="about-team.html">Contact
+                 <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
                  <ul>
@@ -504,39 +504,56 @@ html, body {
   <div class="statistics">
     <div class="consumption-panel">
       <div class="flex flex--justify-between">
-        <p>
-          Total Consumption       
-        </p>
+        <!-- <h6 style="color:black">
+        Rooms Illumination
+        </h6> -->
+        <p class="title" style="color:black">Rooms Illumination</p>       
+     
       </div>
-      <h1 class="consumption">79 KWH ~ $89.90</h1>
+      <!-- <h6 class="consumption" style="color:black"></h6> -->
       <svg id="visualisation" width="600" height="100"></svg>
       
-      <p class="title">Rooms Consumption</p>
+      <p class="title" style="color:black">Rooms Humidity</p>
       <div class="bar-chart">
         
+        <%List<Sensor> hum = SensorDAO.getHumidity(); 
+          	String num1 = "30";
+          	String num2 = "40";
+          	String num3 = "50";
+          	String num4 = "40";
+         	String num5 = "30";
+          	if(hum.size() >= 3){
+          		num1 = hum.get(0).getUpdateData();
+          		num2 = hum.get(1).getUpdateData();
+          		num3 = hum.get(2).getUpdateData();
+          		num4 = hum.get(3).getUpdateData();
+          		num5 = hum.get(4).getUpdateData();
+          	}
+          %>
         <div class="progress progress--vertical">
-          <div class="progress__fill" style="height: 87%"></div>
-          <p class="progress__caption">Study</p>          
+          
+          <div class="progress__fill" style="height: <%=num1 %>%"></div>
+          <p class="progress__caption" style="color:black"><%=num1 %>%</p>          
         </div>
         
         <div class="progress progress--vertical">
-          <div class="progress__fill" style="height: 50%"></div>
-          <p class="progress__caption">Bedroom</p>          
+          <div class="progress__fill" style="height: <%=num2 %>%"></div>
+          <p class="progress__caption" style="color: black"> <%=num2 %>%</p>          
         </div>
         
         <div class="progress progress--vertical">
-          <div class="progress__fill" style="height: 64%"></div>
-          <p class="progress__caption">Kitchen</p>          
+          <div class="progress__fill" style="height: <%=num3 %>%"></div>
+          <p class="progress__caption" style="color: black"><%=num3 %>%</p>          
         </div>
         
         <div class="progress progress--vertical">
-          <div class="progress__fill" style="height: 78%"></div>
-          <p class="progress__caption">Living</p>         
+          <div class="progress__fill" style="height: <%=num4 %>%"></div>
+          <p class="progress__caption" style="color: black"><%=num4 %>%</p>         
         </div>
         
         <div class="progress progress--vertical">
-          <div class="progress__fill" style="height: 30%"></div>
-          <p class="progress__caption">Bathroom</p>         
+          <div class="progress__fill" style="height: <%=num5 %>%"></div>
+          <p class="progress__caption" style="color: black"><%=num5 %>%</p>         
         </div>        
 
       </div>
@@ -556,29 +573,54 @@ html, body {
         </li>
         
       </ul> 
+      <%
+      String bData = "25";
+      String lData = "21";
+      String kData = "23";
+      
+      List<Sensor> bList = SensorDAO.getTemperatureByRoom("Bedroom");
+      List<Sensor> lList = SensorDAO.getTemperatureByRoom("Living Room");
+      List<Sensor> kList = SensorDAO.getTemperatureByRoom("Kitchen");
+      
+      if(!bList.isEmpty()) bData = bList.get(0).getUpdateData();
+      if(!lList.isEmpty()) lData = lList.get(0).getUpdateData();
+      if(!kList.isEmpty()) kData = kList.get(0).getUpdateData();
+
+      %>
+      
       <div class="temperature">
         <h4 class="title">General Temperature</h4>
         <div class="flex flex--justify-between">
           
           <div class="one-half">
             <div class="temperature__reading">
-              23° C           
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%=bData %>° C           
             </div>
             <div class="temperature__description">
               Current           
             </div>
-            <button class="button">Cooler</button>
+            <button class="button" onclick="javascrtpt:window.location.href='bedroom-detail.jsp'">Bedroom</button>
           </div>
           
           <div class="one-half">
             <div class="temperature__reading">
-              21° C           
+              &nbsp&nbsp&nbsp&nbsp<%=lData %>° C           
             </div>
             <div class="temperature__description">
               Target            
             </div>
-            <button class="button">Warmer</button>
+            <button class="button" onclick="javascrtpt:window.location.href='living-room-detail.jsp'">Living Room</button>
           </div>  
+          
+           <div class="one-half">
+            <div class="temperature__reading">
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%=kData %>° C           
+            </div>
+            <div class="temperature__description">
+              Current           
+            </div>
+            <button class="button" onclick="javascrtpt:window.location.href='kitchen-detail.jsp'">Kitchen</button>
+          </div>
           
         </div>
       </div> <!-- /.temperature -->
@@ -634,7 +676,7 @@ html, body {
                             <div>
                               <h3>OVERVIEW <br> OF <br> ROOM</h3>
                               <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
+                              <a class="shin" href="projects-detail.jsp">
                               MORE DETAIL &rarr;
                               </a>
                             </div>
@@ -652,7 +694,7 @@ html, body {
                             <div class="start-align">
                               <h3>REDESIGN <br> CO-WORKING <br> ROOM</h3>
                               <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
+                              <a class="shin" href="projects-detail.jsp">
                               MORE DETAIL &rarr;
                               </a>
                             </div>
@@ -670,7 +712,7 @@ html, body {
                             <div class="start-align">
                               <h3>DESIGN <br> INTERIOR <br> BALCONY</h3>
                               <p>Proin pretium consequat est, sit amet consectetur luctus vel Etiam quis...</p>
-                              <a class="shin" href="projects-detail.html">
+                              <a class="shin" href="projects-detail.jsp">
                               MORE DETAIL &rarr;
                               </a>
                             </div>
@@ -713,7 +755,7 @@ html, body {
             <div class="bottom-footer">
               <div class="row">
                 <div class="col-sm-6 copyright">
-                  <span>© 2019 Concreate, All Right <a href="http://www.17sucai.com/" title="17sucai">Reserved</a></span>
+                  <span>© 2019 Intelligent Home Control System, All Right Reserved</span>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                   

@@ -151,7 +151,7 @@
                  <a class="actived" href="environment.jsp">Environment
                   <span class="hidden-lg span-drop"></span>
                  </a>
-                 
+                </li>  
                 <li>
                  <a href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>

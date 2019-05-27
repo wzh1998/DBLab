@@ -240,6 +240,7 @@ public class ActuatorDAO {
 		}
 		return false;
 	}
+	
 	public static boolean insertLamp(Lamp lamp) {
 		try {
 			Connection conn = JDBCTool.getConnection();

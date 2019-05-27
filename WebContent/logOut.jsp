@@ -19,6 +19,7 @@ if(u==null){
 }
 else{
 	session.invalidate();
+	
 	response.sendRedirect("index.jsp");
 	
 	//User u2 = (User)session.getAttribute("user");

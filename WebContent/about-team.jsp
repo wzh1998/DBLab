@@ -87,7 +87,7 @@
 
           <!-- logo --> 
           <a class="navbar-brand white" href="index.jsp">
-          <img alt="logo" src="img/logo.png">
+          <img alt="logo" src="img/logo-black.png">
           </a> 
           <!-- logo end -->
 
@@ -103,29 +103,11 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="Overview.jsp">Overview
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 
-                </li>
-
-                <li>
-                 <a href="actuator-control.jsp?Page=1">Device
+                 <a href="index.jsp">Home
                   <span class="hidden-lg span-drop"></span>
                  </a>
                 </li>
-
-                <li>
-                 <a href="environment.jsp">Environment
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                </li>
-
-                <li>
-                 <a href="environment.jsp">Environment
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 
+                
                 <li>
                  <a class="actived" href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
@@ -156,7 +138,7 @@
            <div class="col-md-3">
               <div class="wrapheading">
                 <h1 class="heading">OUR TEAM</h1>
-                <h2 class="headingcontent">We Are <br> Profesional</h2>
+                <h2 class="headingcontent">We Are <br> Students</h2>
               </div>
             </div> 
             

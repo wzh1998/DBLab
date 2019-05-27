@@ -3327,12 +3327,13 @@ body.black #sub-icon{
 body.black .btn-s-input{
     right:-4px;
 }
-body.black .h1, body.black .h2, body.black .h3, body.black .h4, body.black .h5, body.black .h6, body.black h1, 
-body.black h2, body.black h3, body.black h4, body.black h5, body.black h6, body.black .social-icons-subnav span, 
+body.black .h1, body.black .h2, body.black .h3, body.black .h4, body.black .h5, body.black h1, 
+body.black h2, body.black h3, body.black h4, body.black h5, body.black .h6, body.black h6, body.black .social-icons-subnav span, 
 body.black .social-icons-subnav i, body.black .white nav a, body.black .year .heading, body.black .year .subheading,
 body.black .tagline,body.black .footer, body.black .footer a {
     color: #fff;
 }
+
 body.black section.dot{
     background-image: url(../img/dotblack.png);
 }

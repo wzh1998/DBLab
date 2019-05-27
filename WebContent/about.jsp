@@ -93,7 +93,7 @@
 
           <!-- logo --> 
           <a class="navbar-brand white" href="index.jsp">
-          <img alt="logo" src="img/logo.png">
+          <img alt="logo" src="img/logo-black.png">
           </a> 
           <!-- logo end -->
 
@@ -109,34 +109,15 @@
             <nav id="menu-center">
               <ul>
                 <li>
-                 <a href="Overview.jsp">Overview
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 
-                </li>
-
-                <li>
-                 <a href="actuator-control.jsp?Page=1">Device
+                 <a href="index.jsp">Home
                   <span class="hidden-lg span-drop"></span>
                  </a>
                 </li>
-
-                <li>
-                 <a href="environment.jsp">Environment
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                </li>
-
-                <li>
-                 <a href="environment.jsp">Environment
-                  <span class="hidden-lg span-drop"></span>
-                 </a>
-                 
+                
                 <li>
                  <a class="actived" href="about-team.jsp">Contact
                   <span class="hidden-lg span-drop"></span>
                  </a>
-
                  <ul>
                   <li><a href="about.jsp">Our Team</a></li>
                   <li><a href="about-team.jsp">Team Members</a></li>
@@ -189,11 +170,12 @@
                  <!-- heading text end --> 
                 
                 <div class="col-md-8">
-                  <p>Donec posuere bibendum metus. Quisque gravida luctus volutpat mauris interdum lectus in dapibus molestie quam felis sollicitudin amet tempus velit lectus nec lorem. Nullam vel mollis neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel enim dui. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.
+                  <p> 
+                  Homes have undergone rapid transformations since the Industrial revolution. Over the last hundred and fifty years, various technologies from ovens to ranges, washing machines to refrigerators, lawn mowers to sprinklers along with televisions and automobiles have become an integral part of home. Each wave of technology has remade what the home is, what it means to live in a home and what each member of the family does in it.
                   </p>
 
                   <p class="content">
-            Vestibulum cursus convallis venenatis. Sed ut blandit mauris. Lorem non suscipit. Proin pretium consequat est, sit amet consectetur luctus vel. Etiam quis interdum felis, at pellentesque metus.
+            These smart home devices belong to a larger phenomenon called the Internet of Things (IoT). We are BDIC students who are major in IoT,  we are learning how to capture data from the physical world and transmit it virtually and similarly gather instructions virtually and perform physical actions, and we have ability to integrates the knowledge acquired from subjects like COMP2006J and others, applies to practical issues.
           </p>
                 </div>
                 
@@ -214,7 +196,7 @@
                     OUR TEAM
                   </h1>
                   <h2 class="no-top">
-                   We Are <br> Profesional
+                   We Are <br> Students
                   </h2>
                   
                  </div>

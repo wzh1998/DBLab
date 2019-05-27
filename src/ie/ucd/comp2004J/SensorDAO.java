@@ -189,8 +189,120 @@ public class SensorDAO {
 		}
 		return false;
 	}
+
 	
+	public static List<Sensor> getHumidity() {
+		List<Sensor> Sensors = new ArrayList<Sensor>();
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();
+		
+			ResultSet rs = st.executeQuery("SELECT * from Sensors WHERE Type='HUMIDITY SENSORS'");
+			while(rs.next()) {
+				
+				int SensorID = rs.getInt("SensorID");
+				String SenName = rs.getString("SenName");
+				int SenState = rs.getInt("SenState");
+				@SuppressWarnings("deprecation")
+				java.sql.Timestamp UpdateTime_t = rs.getTimestamp("UpdateTime");	
+				Date date = new Date(UpdateTime_t.getTime());
+				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+				String UpdateTime = sdf.format(date);	
+			
+				String UpdateData = rs.getString("UpdateData");
+				int ActID = rs.getInt("ActID");
+				String Unit = rs.getString("Unit");
+				String Type = rs.getString("Type");
+				String Room = rs.getString("Room");
+			
+				Sensor e = new Sensor(SensorID, SenName, SenState, UpdateTime, UpdateData, ActID, Unit, Type, Room);
+			
+				Sensors.add(e);
+			}
+
+			rs.close();
+			st.close();	
+			conn.close();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Sensors;
+	}
 	
+	public static List<Sensor> getIllumination() {
+		List<Sensor> Sensors = new ArrayList<Sensor>();
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();
+		
+			ResultSet rs = st.executeQuery("SELECT * from Sensors WHERE Type='ILLUMINATION SENSORS'");
+			while(rs.next()) {
+				
+				int SensorID = rs.getInt("SensorID");
+				String SenName = rs.getString("SenName");
+				int SenState = rs.getInt("SenState");
+				@SuppressWarnings("deprecation")
+				java.sql.Timestamp UpdateTime_t = rs.getTimestamp("UpdateTime");	
+				Date date = new Date(UpdateTime_t.getTime());
+				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+				String UpdateTime = sdf.format(date);	
+			
+				String UpdateData = rs.getString("UpdateData");
+				int ActID = rs.getInt("ActID");
+				String Unit = rs.getString("Unit");
+				String Type = rs.getString("Type");
+				String Room = rs.getString("Room");
+			
+				Sensor e = new Sensor(SensorID, SenName, SenState, UpdateTime, UpdateData, ActID, Unit, Type, Room);
+			
+				Sensors.add(e);
+			}
+
+			rs.close();
+			st.close();	
+			conn.close();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Sensors;
+	}
+	public static List<Sensor> getTemperatureByRoom(String room) {
+		List<Sensor> Sensors = new ArrayList<Sensor>();
+		try {
+			Connection conn = JDBCTool.getConnection();
+			Statement st = conn.createStatement();
+		
+			ResultSet rs = st.executeQuery("SELECT * from Sensors WHERE Type='TEMPERATURE SENSORS' AND Room='" + room + "'; ");
+			while(rs.next()) {
+				
+				int SensorID = rs.getInt("SensorID");
+				String SenName = rs.getString("SenName");
+				int SenState = rs.getInt("SenState");
+				@SuppressWarnings("deprecation")
+				java.sql.Timestamp UpdateTime_t = rs.getTimestamp("UpdateTime");	
+				Date date = new Date(UpdateTime_t.getTime());
+				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+				String UpdateTime = sdf.format(date);	
+			
+				String UpdateData = rs.getString("UpdateData");
+				int ActID = rs.getInt("ActID");
+				String Unit = rs.getString("Unit");
+				String Type = rs.getString("Type");
+				String Room = rs.getString("Room");
+			
+				Sensor e = new Sensor(SensorID, SenName, SenState, UpdateTime, UpdateData, ActID, Unit, Type, Room);
+			
+				Sensors.add(e);
+			}
+
+			rs.close();
+			st.close();	
+			conn.close();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Sensors;
+	}
 	public static List<Sensor> getSensorsByRoom(String room) {
 		List<Sensor> Sensors = new ArrayList<Sensor>();
 		try {
@@ -218,25 +330,7 @@ public class SensorDAO {
 				
 				Sensors.add(e);
 			}
-//			while(rs.next()) {
-//				
-//				int SensorID = rs.getInt("SensorID");
-//				String SenName = rs.getString("SenName");
-//				int SenState = rs.getInt("SenState");
-//				@SuppressWarnings("deprecation")
-//				String UpdateTime = rs.getTime("UpdateTime").toGMTString();
-//				String UpdateData = rs.getString("UpdateData");
-//				int ActID = rs.getInt("ActID");
-//				
-//				String Unit = rs.getString("Unit");
-//				String Type = rs.getString("Type");
-//				String Room = rs.getString("Room");
-//				
-//				Sensor e = new Sensor(SensorID, SenName, SenState, UpdateTime, UpdateData, ActID, Unit, Type, Room);
-//				
-//				Sensors.add(e);
-//			}
-			
+
 			rs.close();
 			st.close();
 			conn.close();	
