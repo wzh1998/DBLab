@@ -360,11 +360,14 @@ html, body {
   </head>
   
   <body class="black">
+  
+  	
   <%
   if(session.getAttribute("user") == null) {
-  	response.sendRedirect("index.jsp");
-  } 
+	  response.sendRedirect("index.jsp");
+  }
   %>
+	
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- preloader -->
     <div class="bg-preloader-white"></div>

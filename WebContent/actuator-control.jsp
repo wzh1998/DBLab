@@ -375,15 +375,15 @@ input[type="checkbox"].switch_2:checked:after{
             <div class="bottom-footer">
               <div class="row">
                 <div class="col-sm-6 copyright">
-                  <span>© 2019 Concreate, All Right <a href="http://www.17sucai.com/" title="17sucai">Reserved</a></span>
+                 <span>© 2019 Intelligent Home Control System, All Right Reserved</span>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                   <div class="social-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a> 
+                    <!-- <a href="#"><i class="fa fa-facebook"></i></a> 
                     <a href="#"><i class="fa fa-pinterest"></i></a> 
                     <a href="#"><i class="fa fa-tumblr"></i></a> 
                     <a href="#"><i class="fa fa-twitter"></i></a> 
-                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a> -->
                   </div>
                 </div>
               </div>
