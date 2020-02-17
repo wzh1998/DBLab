@@ -151,7 +151,7 @@
                                 data-start="400"
                                 data-easing="easeInOutExpo"
                                 data-endspeed="450">
-                                Architecture Design
+                                Welcome To Future
                             </div>
 
                             <div class="tp-caption slide-sub-heading sft"
@@ -161,7 +161,7 @@
 					            data-start="800"
 					            data-easing="easeOutExpo"
                                 data-endspeed="400">
-                                Concreate Art
+                                Smart Home
                             </div>
 
                             <div class="tp-caption btn-slider sfb"
@@ -186,7 +186,7 @@
                                 data-start="400"
                                 data-easing="easeInOutExpo"
                                 data-endspeed="450">
-                                Design Concreate
+                                Welcome To Future
                             </div>
 
                             <div class="tp-caption slide-sub-heading sft"
@@ -196,7 +196,7 @@
                       data-start="800"
                       data-easing="easeOutExpo"
                                 data-endspeed="400">
-                                Modern Building
+                                Smart Home
                             </div>
 
                             <div class="tp-caption btn-slider sfb"
@@ -220,7 +220,7 @@
                                 data-start="400"
                                 data-easing="easeInOutExpo"
                                 data-endspeed="450">
-                                Conceptual Design
+                                Welcome To Future
                             </div>
 
                             <div class="tp-caption slide-sub-heading sft"
@@ -230,7 +230,7 @@
                       data-start="800"
                       data-easing="easeOutExpo"
                                 data-endspeed="400">
-                                House & Building
+                                Smart Home
                             </div>
 
                             <div class="tp-caption btn-slider sfb"

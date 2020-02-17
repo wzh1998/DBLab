@@ -15,7 +15,9 @@ public class UserDAO {
 			conn = JDBCTool.getConnection();
 		
 			String information = "SELECT * FROM Users WHERE FName=? AND Password=?";
+			
 			PreparedStatement ps = conn.prepareStatement(information);
+			
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();

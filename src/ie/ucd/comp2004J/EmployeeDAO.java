@@ -37,6 +37,7 @@ public class EmployeeDAO {
 		return employees;
 	}
 	public static int getPageNum() {
+
 		List<Employee> employees = new ArrayList<Employee>();
 		try {
 			Connection conn = JDBCTool.getConnection();

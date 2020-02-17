@@ -2,6 +2,7 @@ package ie.ucd.comp2004J;
 
 import java.security.Timestamp;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -193,10 +194,10 @@ public class SensorDAO {
 	
 	public static List<Sensor> getHumidity() {
 		List<Sensor> Sensors = new ArrayList<Sensor>();
+
 		try {
 			Connection conn = JDBCTool.getConnection();
 			Statement st = conn.createStatement();
-		
 			ResultSet rs = st.executeQuery("SELECT * from Sensors WHERE Type='HUMIDITY SENSORS'");
 			while(rs.next()) {
 				
